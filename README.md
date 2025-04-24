@@ -1,1 +1,3 @@
-# 2025.1-ProgComp
+# 2025.1 - PROGRAMAÇÃO DE COMPUTADORES
+
+Repositório de exemplos das aulas da disciplinas TEC.0007 - PROGRAMAÇÃO DE COMPUTADORES no Semestre letivo 2025.1 do CURSO SUPERIOR DE TECNOLOGIA DE REDES DE COMPUTADORES.
