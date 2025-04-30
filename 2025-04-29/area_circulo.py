@@ -9,3 +9,5 @@ print('Area do circulo: ', area)
 print('A area do circulo de raio', raio, 'é', area)
 
 print(f'A area do circulo de raio {raio} é {area:.4f}')
+
+#teste
