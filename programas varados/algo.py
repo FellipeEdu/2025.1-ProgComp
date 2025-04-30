@@ -1,3 +1,3 @@
 # vou fazer alguma coisa aq
 
-print('testando o commit')
+print('testando o commit\n')
