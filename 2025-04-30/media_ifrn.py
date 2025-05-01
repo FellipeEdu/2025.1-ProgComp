@@ -6,8 +6,8 @@
 #
 # Media = ((Etapa1 * 2) + (Etapa2 * 3)) / 5
 
-etapa_1 = int(input('nota 1: '))
-etapa_2 = int(input('nota 2: '))
+etapa_1 = int(input('digite nota 1: '))
+etapa_2 = int(input('digite nota 2: '))
 
 media = ((etapa_1 * 2) + (etapa_2 * 3)) / 5
 
