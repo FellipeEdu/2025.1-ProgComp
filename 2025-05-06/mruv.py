@@ -4,4 +4,4 @@ acel = int(input('aceleração: '))
 
 dist = Vo * tempo + ((acel * (tempo ** 2)) / 2)
 
-print(f'distancia percorrida: {dist:.2f}')
+print(f'distancia percorrida: {dist}')
