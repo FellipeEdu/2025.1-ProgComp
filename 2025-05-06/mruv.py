@@ -2,7 +2,7 @@ import sys
 
 Vo = int(input('vel inicial: '))
 if Vo <= 0 :
-    sys.exit('informe uma velocidade positiva')
+    sys.exit('informe uma velocidade positiva') # .exit faz terminar a execução do programa
 
 tempo = int(input('tempo: '))
 if tempo <= 0 :
@@ -11,7 +11,7 @@ if tempo <= 0 :
 acel = int(input('aceleração: '))
 if acel <= 0 :
     sys.exit('informe uma aceleração positiva')
-    
+
 dist = Vo * tempo + ((acel * (tempo ** 2)) / 2)
 
 print(f'distancia percorrida: {dist}')
