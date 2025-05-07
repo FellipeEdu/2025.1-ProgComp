@@ -21,4 +21,9 @@ if delta < 0:
 
 t = (-Vo + delta ** 0.5)/(2 * acel) # ** 0.5 = raiz quadrada
 
-print(f'distancia restante ')
+hora = t // 3600
+t = t % 3600
+minuto = t // 60
+segundo = t % 60
+
+print(f'tempo restante: {hora}:{minuto}:{segundo}')
