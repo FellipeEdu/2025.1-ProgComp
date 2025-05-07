@@ -21,7 +21,7 @@ if delta < 0:
 
 t = (-Vo + delta ** 0.5)/(2 * acel) # ** 0.5 = raiz quadrada
 
-hora = t // 3600 # estudar isso
+hora = t // 3600 # estudar isso a partir daq
 t = t % 3600
 minuto = t // 60
 segundo = t % 60
