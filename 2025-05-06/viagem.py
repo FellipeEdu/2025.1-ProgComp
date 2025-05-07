@@ -20,6 +20,8 @@ Vo /= 3.6
 
 delta = int(Vo ** 2 - 4 * acel * dist)
 if delta < 0:
-    sys.exit('não é possivel calcular')
+    sys.exit('não é possivel calcular o tempo')
 
-print(f'')
+t = (-Vo + delta ** 0.5)/(2 * acel)
+
+print(f'distancia restante ')
