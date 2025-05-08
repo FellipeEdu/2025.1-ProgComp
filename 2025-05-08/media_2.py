@@ -11,6 +11,7 @@ if etapa2 < 0 or etapa2 > 100:
     sys.exit('ERRO: nota etapa 2 invalida. Informe nota entre 0 e 100')
 
 media = (etapa1 * 2 + etapa2 * 3) / 5
+print(f'Media do aluno: {media}')
 print(f'Media do aluno: {media:.0f}')
 
 if media >= 60:
