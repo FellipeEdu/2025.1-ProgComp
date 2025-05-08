@@ -1,21 +1,21 @@
 import sys
 
-dist = int(input('distancia entre cidades (km): '))
+dist = int(input('distancia entre cidades (km): ')) # 140
 if dist <= 0:
     sys.exit('informe distancia positiva')
 
-Vo = int(input('vel inicial (km/h): '))
+Vo = int(input('vel inicial (km/h): ')) # 50
 if Vo <= 0:
     sys.exit('informe vel inicial positiva')
 
-acel = int(input('aceleração (m/s²): '))
+acel = int(input('aceleração (m/s²): ')) # 5
 if acel <= 0:
     sys.exit('informe aceleração positiva')
 
-dist *= 1000
-Vo /= 3.6
+dist *= 1000 # 140000
+Vo /= 3.6 # 14
 
-delta = int(Vo ** 2 - 4 * acel * dist)
+delta = int(Vo ** 2 - 4 * acel * dist) # 
 if delta < 0:
     sys.exit('não é possivel calcular o tempo')
 
