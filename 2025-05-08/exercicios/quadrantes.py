@@ -12,4 +12,4 @@ elif pontoX < 0 and pontoY < 0:
 elif pontoX > 0 and pontoY < 0:
     print(f'O ponto ({pontoX},{pontoY}) pertence ao 4° quadrante.')
 else:
-    print(f'O ponto ({pontoX},{pontoY}) é centro do plano')
+    print(f'O ponto ({pontoX},{pontoY}) é origem do plano ou está nos eixos coordenados')
