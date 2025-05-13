@@ -9,8 +9,8 @@ soma = int(angA + angB + angC)
 if soma < 180 or soma > 180:
     sys.exit('digite valores compativeis com um triangulo')
 elif angA == 90 or angB == 90 or angC == 90:    
-    sys.exit('Triangulo Retangulo.')
+    print('Triangulo Retangulo.')
 elif angA >= 90 or angB >= 90 or angC >= 90:
-    sys.exit('Obtusângulo.')
+    print('Obtusângulo.')
 elif angA <= 90 or angB <= 90 or angC <= 90:
-    sys.exit('Acutângulo.')
+    print('Acutângulo.')
