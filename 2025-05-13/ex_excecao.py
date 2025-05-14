@@ -20,4 +20,4 @@ except: # as tipoExcecao:  # passando a informação da exceção pra uma variav
 else:
     print(floatResultado)
 
-#teste
+#teste dnv
