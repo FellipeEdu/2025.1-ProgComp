@@ -13,7 +13,7 @@ try:
     floatResultado = intDividendo / intDivisor
 except ValueError:  # exceção expecifica, nesse caso, de valor
     print('ERRO: informe um valor que possa ser convertido em inteiro')
-except ZeroDivisionError:
+except ZeroDivisionError: # exceção pra divisao por zero
     print('ERRO: não existe divisão por zero')
 except: # as tipoExcecao:  # passando a informação da exceção pra uma variavel
     print(f'ERRO: {sys.exc_info()}')    
