@@ -18,7 +18,7 @@ except ValueError:  # exceção expecifica, nesse caso, de valor
 except ZeroDivisionError: # exceção pra divisao por zero
     print('ERRO: não existe divisão por zero')
 
-except Exception as tipoExcecao:        # passando a informação da exceção pra uma variavel
+except '''Exception as tipoExcecao''' :        # passando a informação da exceção pra uma variavel
     print(f'ERRO: {sys.exc_info()}')    # exibe uma informação mais detalhada do erro -> "<class 'ValueError'>, ValueError("erro"), <traceback>"
 #    print(f'ERRO: {tipoExcecao}')      # exibe apenas a informação do que foi o erro -> "erro"
 
