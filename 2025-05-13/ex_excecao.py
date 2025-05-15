@@ -19,5 +19,3 @@ except: # as tipoExcecao:  # passando a informação da exceção pra uma variav
     print(f'ERRO: {sys.exc_info()}')    
 else:
     print(floatResultado)
-
-#teste dnv e dnv
