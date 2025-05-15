@@ -16,6 +16,6 @@ except ValueError:  # exceção expecifica, nesse caso, de valor
 except ZeroDivisionError: # exceção pra divisao por zero
     print('ERRO: não existe divisão por zero')
 except: # as tipoExcecao:  # passando a informação da exceção pra uma variavel
-    print(f'ERRO: {sys.exc_info()}')    
+    print(f'ERRO: {sys.exc_info()}')    # exibe uma informação mais tecnica do erro
 else:
     print(floatResultado)
