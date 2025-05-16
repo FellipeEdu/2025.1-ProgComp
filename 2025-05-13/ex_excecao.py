@@ -12,7 +12,7 @@ try:
     intDivisor = int(input('Digite o dividendo:'))
     floatResultado = intDividendo / intDivisor
 
-except ValueError:  # exceção expecifica, nesse caso, de valor
+except ValueError:  # exceção expecifica, nesse caso, de tipo de valor
     print('ERRO: informe um valor que possa ser convertido em inteiro')
 
 except ZeroDivisionError: # exceção pra divisao por zero
