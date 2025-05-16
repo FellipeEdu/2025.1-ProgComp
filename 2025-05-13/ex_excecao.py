@@ -10,6 +10,7 @@ import sys
 try:
     intDividendo = int(input('Digite o dividendo:'))
     intDivisor = int(input('Digite o dividendo:'))
+    
     floatResultado = intDividendo / intDivisor
 
 except ValueError:  # exceção expecifica, nesse caso, de tipo de valor
