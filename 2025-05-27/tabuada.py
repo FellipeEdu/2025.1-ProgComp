@@ -16,6 +16,8 @@ else:
     while multiplicando <= 10:
         print(f'{mult} x {multiplicando} = {mult * multiplicando}')
         multiplicando += 1
+    
+    print('FIM DA TABUADA...')
 
     '''res = mult * 1
     print(f'{mult} x 1 = {res}')
