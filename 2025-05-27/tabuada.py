@@ -1,13 +1,19 @@
+import sys
+
 try:
     mult = int(input('Informe o multiplicador: '))
+    if mult < 0:
+        sys.exit('ERRO: digite um numero positivo.')
 
 except ValueError:
-    print('ERRO: Digite um valor inteiro.')
+    print('ERRO: digite um valor inteiro.')
 
 except Exception as exc:
     print(f'ERRO: {exc}')
 
 else:
+
+    
     res = mult * 1
     print(f'{mult} x 1 = {res}')
 
