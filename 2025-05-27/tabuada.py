@@ -12,9 +12,12 @@ except Exception as exc:
     print(f'ERRO: {exc}')
 
 else:
+    multiplicando = int(0)
+    while multiplicando <= 10:
+        print(f'{mult} x {multiplicando} = {mult * multiplicando}')
+        multiplicando += 1
 
-    
-    res = mult * 1
+    '''res = mult * 1
     print(f'{mult} x 1 = {res}')
 
     res = mult * 2
@@ -42,4 +45,4 @@ else:
     print(f'{mult} x 9 = {res}')
     
     res = mult * 10
-    print(f'{mult} x 10 = {res}')
+    print(f'{mult} x 10 = {res}')'''
