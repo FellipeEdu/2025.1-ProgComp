@@ -1,21 +1,24 @@
 import sys
 
 try:
+    # condições de valor > 0 movidas para o else:
     multiplicador = int(input('digite o multiplicador: '))
-    if multiplicador < 0:
-        sys.exit('ERRO: digite um numero positivo.')
-
     multiplicando = int(input('digite o multiplicando: '))
-    if multiplicando < 0:
-        sys.exit('ERRO: digite um numero positivo.')
 
 except ValueError:
-    sys.exit('ERRO: digite um valor numérico.')
+    sys.exit('ERRO: digite um valor numérico inteiro positivo.')
 
 except Exception as exc:
     sys.exit(f'ERRO: {exc}.')
 
 else:
+    # condições de valor > 0 aqui
+    if multiplicador <= 0:
+        sys.exit('ERRO: digite um multiplicador positivo.')
+
+    if multiplicando <= 0:
+        sys.exit('ERRO: digite um multiplicando positivo.')
+
     i = 1
     resultado = 0
     while i <= multiplicador:
@@ -23,3 +26,11 @@ else:
         print(f'{resultado} + {multiplicando} = {resultado + multiplicando}')
         resultado += multiplicando 
     print('FIM DA TABUADA.')
+
+    #logica do professor
+    produto = 0
+    contador = 1
+    while contador <= multiplicador: 
+        produto += multiplicando
+        contador += 1
+    print(f'{multiplicador} X {multiplicando} = {produto}')
