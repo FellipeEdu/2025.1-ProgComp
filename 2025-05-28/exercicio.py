@@ -55,7 +55,8 @@ while numero != 0:
             soma += numero
             contPositivos += 1
 
-        contNumeros += 1
+        if numero != 0:
+            contNumeros += 1
 
 print(f'Quantidade numeros inteiros: {contNumeros}')
 print(f'Soma: {soma}')
