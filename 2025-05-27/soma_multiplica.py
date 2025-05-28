@@ -10,11 +10,10 @@ try:
         sys.exit('ERRO: digite um numero positivo.')
 
 except ValueError:
-    print('ERRO: digite um valor numérico.')
+    sys.exit('ERRO: digite um valor numérico.')
 
 except Exception as exc:
-    print(f'ERRO: {exc}.')
-    print(Exception)
+    sys.exit(f'ERRO: {exc}.')
 
 else:
     i = 1
