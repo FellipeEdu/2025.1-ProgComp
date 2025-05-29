@@ -23,3 +23,5 @@ else:
     while contador <= potencia:
         potenciacao *= base
         contador += 1
+
+# OLHAR O RESTO DO CODIGO NO GITHUB DO PROF
