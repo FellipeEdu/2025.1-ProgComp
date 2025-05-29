@@ -13,7 +13,7 @@ except Exception as exc:
 
 else:
     divisores = 1
-    contDivisor = 0
+    contDivisor = 0 # poderia tambem ja iniciar com 2
     while divisores <= numero:
         if (numero % divisores) == 0:
             contDivisor += 1
