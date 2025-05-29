@@ -13,9 +13,10 @@ except Exception as exc:
 
 else:
     resultado = numero
+    contador = numero
     
-    while numero > 1:
+    while contador > 1:
         resultado *= (numero - 1)
-        numero -= 1
+        contador -= 1
     
-    print(f'Fatorial = {resultado}')
+    print(f'Fatorial de {numero} = {resultado}')
