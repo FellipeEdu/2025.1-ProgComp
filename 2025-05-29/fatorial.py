@@ -12,11 +12,17 @@ except Exception as exc:
     sys.exit(f'ERRO: {exc}')
 
 else:
-    resultado = numero
-    contador = numero
-    
-    while contador > 1:
-        resultado *= (numero - 1)
-        contador -= 1
-    
-    print(f'Fatorial de {numero} = {resultado}')
+    if numero < 0:
+        print('Não existe fatorial.')
+    elif numero < 2:
+        print(f'Fatorial de {numero} = 1')
+
+    else:
+        resultado = numero
+        contador = numero
+        
+        while contador > 1:
+            resultado *= (numero - 1)
+            contador -= 1
+        
+        print(f'Fatorial de {numero} = {resultado}')
