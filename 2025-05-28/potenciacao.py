@@ -18,10 +18,10 @@ else:
     if potencia <= 0:
         sys.exit('ERRO: digite uma potencia positiva.')
 
-    potenciacao = 0
+    potenciacao = 1
     contador = 1
     while contador <= potencia:
         potenciacao *= base
         contador += 1
 
-# OLHAR O RESTO DO CODIGO NO GITHUB DO PROF
+    print(f'{base} ** {potencia} = {potenciacao}')
