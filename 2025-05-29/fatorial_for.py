@@ -14,15 +14,20 @@ except Exception as exc:
 else:
     if numero < 0:
         print('Não existe fatorial.')
-    elif numero < 2:
+    if numero < 2:
         print(f'Fatorial de {numero} = 1')
 
     else:
         resultado = numero
-        contador = numero
+        contador = numero - 1
         
-        while contador > 1:
-            resultado *= (numero - 1)
+        '''while contador > 1:
+            resultado *= contador
             contador -= 1
+        
+        print(f'Fatorial de {numero} = {resultado}')'''
+
+        for contador in range(numero - 1, 1, -1):
+            resultado *= contador
         
         print(f'Fatorial de {numero} = {resultado}')
