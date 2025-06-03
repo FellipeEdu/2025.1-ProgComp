@@ -12,10 +12,14 @@ except Exception as exc:
     print(f'ERRO: {exc}')
 
 else:
-    multiplicando = int(0)
+
+    '''multiplicando = 1
     while multiplicando <= 10:
         print(f'{mult} x {multiplicando} = {mult * multiplicando}')
         multiplicando += 1
+    '''
+    
+    for multiplicando
     
     print('FIM DA TABUADA...')
 
