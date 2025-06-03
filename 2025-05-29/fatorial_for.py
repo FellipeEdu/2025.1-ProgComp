@@ -19,14 +19,14 @@ else:
 
     else:
         resultado = numero
-        contador = numero - 1
+        #contador = numero - 1
         
         '''while contador > 1:
             resultado *= contador
             contador -= 1
         
         print(f'Fatorial de {numero} = {resultado}')'''
-
+    
         for contador in range(numero - 1, 1, -1):
             resultado *= contador
         
