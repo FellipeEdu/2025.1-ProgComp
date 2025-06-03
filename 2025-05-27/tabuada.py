@@ -19,7 +19,8 @@ else:
         multiplicando += 1
     '''
     
-    for multiplicando
+    for multiplicando in range(1, 11, 1):
+        print(f'{mult} x {multiplicando} = {mult * multiplicando}')
     
     print('FIM DA TABUADA...')
 
