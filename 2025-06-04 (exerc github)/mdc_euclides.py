@@ -23,4 +23,4 @@ else:
             dividendo = resto_div # dividendo = 60
             resto_div = resto_final # resto div = 30
         
-    print(f'MDC de {numA} e {numB} é: {dividendo}')
+    print(f'MDC de {numA} e {numB} é: {resto_div}')
