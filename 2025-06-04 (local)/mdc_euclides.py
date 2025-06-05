@@ -28,7 +28,7 @@ else:
         print(f'MDC de {numA} e {numB} = {numB}.') 
 
     else:
-        for contador in range(0, 1000, 1):
+        for contador in range(0, 100, 1):
             resto_final = dividendo % resto_divisor
             if resto_final == 0:
                 break
