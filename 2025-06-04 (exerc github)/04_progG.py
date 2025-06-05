@@ -21,12 +21,14 @@ else:
 
 	if razao > 1:
 		print('\nEssa PG é crescente.')
-	elif razao < 1 and razao > -1:
-		print('\nEssa PG é descrescente.')
+#	elif razao < 1 and razao > -1:
+#		print('\nEssa PG é descrescente.')
 	elif razao == 1:
 		print('\nEssa PG é constante.')
 	elif razao < 0:
 		print('\nEssa PG é oscilante/alternada.')
+	else:
+		print('\nEssa PG é descrescente.')
 
 	soma = (termoInicial * ((razao ** elementos) - 1)) / (razao - 1)
 	print(f'Soma dos {elementos} primeiros elementos da PG = {soma}\n')
