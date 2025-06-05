@@ -13,7 +13,8 @@ except Exception as exc:
 
 else:
 
-    '''multiplicando = 1
+    '''
+    multiplicando = 1
     while multiplicando <= 10:
         print(f'{mult} x {multiplicando} = {mult * multiplicando}')
         multiplicando += 1
