@@ -6,7 +6,7 @@ try:
 	elementos = int(input('quantidade de elementos da PG: '))
 
 	if razao == 0:
-    		sys.exit('ERRO: razao deve ser maior que 0.')
+    		sys.exit('ERRO: razao deve ser diferente de 0.')
 
 except ValueError:
     sys.exit('ERRO: digite um valor numérico inteiro.')
