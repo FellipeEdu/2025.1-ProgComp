@@ -1,7 +1,7 @@
 import sys
 
 try:
-    num = int(input('digite o os N primeiros numeros desejados da sequencia de fibonacci: '))
+    num = int(input('digite os N primeiros numeros desejados da sequencia de fibonacci: '))
 
     if num <= 0:
         sys.exit('ERRO: o numero deve ser maior que zero.')
