@@ -5,9 +5,6 @@ try:
 	razao = float(input('digite a razão da PA: '))
 	elementos = int(input('quantidade de elementos da PA: '))
 
-	if razao == 0:
-    		sys.exit('ERRO: razao deve ser maior que 0.')
-
 except ValueError:
     sys.exit('ERRO: digite um valor numérico inteiro.')
 
@@ -16,17 +13,15 @@ except Exception as exc:
 
 else:
 	for contador in range(1, elementos + 1, 1):
-		termoGeral = termoInicial * (razao ** (contador - 1))
+		termoGeral = termoInicial + ((contador - 1) * razao)
 		print(f'{contador}° Elemento = {termoGeral}')
 
-	if razao > 1:
-		print('\nEssa PG é crescente.')
-	elif razao < 1 and razao > 0:
-		print('\nEssa PG é descrescente.')
-	elif razao == 1:
-		print('\nEssa PG é constante.')
+	if razao > 0:
+		print('\nEssa PA é crescente.')
+	elif razao == 0:
+		print('\nEssa PA é constante.')
 	elif razao < 0:
-		print('\nEssa PG é oscilante/alternada.')
+		print('\nEssa PA é descrescente.')
 
 	soma = (termoInicial * ((razao ** elementos) - 1)) / (razao - 1)
 	print(f'Soma dos {elementos} primeiros elementos da PG = {soma}\n')
