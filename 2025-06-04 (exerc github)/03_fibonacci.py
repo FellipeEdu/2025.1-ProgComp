@@ -20,6 +20,7 @@ else:
         fib = numAnterior + numAtual    # fib = 0 + 1  = 1 | 1 + 1 = 2
         numAnterior = numAtual          # ant = 1 | ant = 1 
         numAtual = fib                  # atual = 1 | atual = 2
-        print(f'{contador}°: {fib}')
+        #print(f'{contador}°: {fib}')
+        print(f'{fib}, ', end = '')
 
     #print(f'O {num}° numero da sequencia de fibonacci é: {fib}\n')
