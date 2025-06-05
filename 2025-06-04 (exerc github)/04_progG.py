@@ -21,7 +21,7 @@ else:
 
 	if razao > 1:
 		print('\nEssa PG é crescente.')
-	elif razao < 1 and razao > 0:
+	elif razao < 1 and razao > -1:
 		print('\nEssa PG é descrescente.')
 	elif razao == 1:
 		print('\nEssa PG é constante.')
