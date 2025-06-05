@@ -22,4 +22,4 @@ else:
         numAtual = fib                  # atual = 1 | atual = 2
         print(f'{contador}°: {fib}')
 
-    print(f'O {num}° numero da sequencia de fibonacci é: {fib}\n')
+    #print(f'O {num}° numero da sequencia de fibonacci é: {fib}\n')
