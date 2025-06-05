@@ -19,7 +19,7 @@ else:
     if multiplicando <= 0:
         sys.exit('ERRO: digite um multiplicando positivo.')
 
-    i = 1
+    '''i = 1
     resultado = 0
     while i <= multiplicador:
         i += 1
@@ -34,3 +34,8 @@ else:
         produto += multiplicando
         contador += 1
     print(f'{multiplicador} X {multiplicando} = {produto}')
+    '''
+    produto = 0
+    for contador in range(1, multiplicador + 1, 1):
+        print(f'{produto} + {multiplicando} = {produto + multiplicando}')
+        produto += multiplicando

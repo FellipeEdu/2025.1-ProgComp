@@ -20,8 +20,11 @@ else:
 
     potenciacao = 1
     contador = 1
-    while contador <= potencia:
+    '''while contador <= potencia:
         potenciacao *= base
-        contador += 1
+        contador += 1'''
+
+    for contador in range(1, potencia + 1, 1):
+        potenciacao *= base
 
     print(f'{base} ** {potencia} = {potenciacao}')
