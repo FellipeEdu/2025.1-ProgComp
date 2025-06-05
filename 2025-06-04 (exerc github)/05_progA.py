@@ -22,11 +22,11 @@ else:
 		print('\nEssa PA é constante.')
 	elif razao < 0:
 		print('\nEssa PA é descrescente.')
+		
+	soma = ((termoInicial + (termoInicial + ((elementos - 1) * razao))) / 2) * elementos
+	print(f'Soma dos {elementos} primeiros elementos da PA = {soma}\n')
 
-	soma = (termoInicial * ((razao ** elementos) - 1)) / (razao - 1)
-	print(f'Soma dos {elementos} primeiros elementos da PG = {soma}\n')
+	termoDesejado = int(input('informe um elemento desejado da PA: '))
 
-	termoDesejado = int(input('informe um elemento desejado da PG: '))
-
-	termoGeralDesejado = termoInicial * (razao ** (termoDesejado - 1))
+	termoGeralDesejado = termoInicial + ((termoDesejado - 1) * razao)
 	print(f'{termoDesejado}° Termo = {termoGeralDesejado}')
