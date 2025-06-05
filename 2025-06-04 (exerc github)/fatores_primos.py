@@ -15,13 +15,18 @@ except Exception as exc:
 else:
     print(f'Os {num_fatores} primeiros numeros com {num_fatores} fatores primos são: ')
 
-    for contadorNumeros in range(1, num_fatores + 1, 1): # vai ocontrolar o calc dos N primeiros numeros q podem ser decompostos em N fatores
+    for contadorNumeros in range(1, num_fatores + 1, 1): # vai controlar o calc dos N primeiros numeros q podem ser decompostos em N fatores
         #numero = 2
-        for numero in range(2, 1000, 1): # vai controlar o calculo de varios numeros verificando quais podem ser decompostos por N valores primos         
+        for numero in range(4, 1000, 1): # vai controlar o calculo de varios numeros verificando quais podem ser decompostos por N valores primos         
             divisorPrimo = 2
-            while divisorPrimo <= numero: # verificar se é primo
+            contDivisorPrimo = 0
+            while divisorPrimo <= numero: 
+                # verificar se divisorPrimo é primo
+                testePrimo = 2
+                while divisorPrimo <= testePrimo:
+
+                if (divisorPrimo % )
                 if (numero % divisorPrimo) == 0:
-                    contDivisor += 1
-                    break
-                else:
-                    divisores += 1
+                    divisorPrimo += 1
+                    contDivisorPrimo += 1
+                
