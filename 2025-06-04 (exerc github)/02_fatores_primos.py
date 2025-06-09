@@ -13,6 +13,7 @@ except Exception as exc:
     sys.exit(f'ERRO: {exc}.')
 
 else:
+    '''
     print(f'Os {num_fatores} primeiros numeros com {num_fatores} fatores primos são: ')
 
     for contadorNumeros in range(1, num_fatores + 1, 1): # vai controlar o calc dos N primeiros numeros q podem ser decompostos em N fatores
@@ -28,5 +29,4 @@ else:
                 if (divisorPrimo % )
                 if (numero % divisorPrimo) == 0:
                     divisorPrimo += 1
-                    contDivisorPrimo += 1
-                
+                    contDivisorPrimo += 1'''
