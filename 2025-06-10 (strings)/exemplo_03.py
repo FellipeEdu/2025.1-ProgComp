@@ -4,4 +4,7 @@ strVogais = 'AEIOUÂÊÎÔÛÁÉÍÓÚÀÈÌÒÙÄËÏÖÜ'
 intVogais = 0
 
 for strLetra in strTexto:
-    if strLetra == 'a' or strLetra == 'e' or strLetra == 'i' or strLetra == 'o' or strLetra == 'u':
+    if strLetra in strVogais: #== 'a' or strLetra == 'e' or strLetra == 'i' or strLetra == 'o' or strLetra == 'u':
+        intVogais += 1
+    
+print(f'O texto possui {intVogais} vogais.')
