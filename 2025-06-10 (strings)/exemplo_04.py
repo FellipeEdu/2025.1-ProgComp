@@ -43,10 +43,10 @@ intQtOcorrencias = strTexto.lower().count(strPalavra)
 print(f'A palavra {strPalavra} aparece {intQtOcorrencias} vezes no texto.')
 
 # verificar a posição
-intPosicao = strTexto.lower().index(strPalavra)
+intPosicao = strTexto.lower().find(strPalavra)
 print(intPosicao)
 
-intPosicao = strTexto.lower().index(strPalavra, intPosicao + 1)
+intPosicao = strTexto.lower().find(strPalavra, intPosicao + 1)
 print(intPosicao)
 
 '''
