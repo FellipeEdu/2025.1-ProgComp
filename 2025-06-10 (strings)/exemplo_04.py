@@ -34,12 +34,23 @@ strTexto = 'Python é uma linguagem de programação de alto nível, interpretad
    'e sua capacidade de adaptação a novas demandas tecnológicas garantem que Python continuará sendo uma peça central no futuro da computação.'
 
 
-strPalavra = input('Digite Palavra: ')
+strPalavra = input('Digite Palavra: ').upper()
 
+intContPalavra = 0
+
+for strTermos in strTexto.upper():
+    if strPalavra in strTermos:
+        intContPalavra += 1
+
+print(f'O texto possui {intContPalavra} palavras {strPalavra}.')
+
+'''
 strTeste = None
 
-for strLetra in strTexto: # vai "capturar" cada caractere do texto
-    if strLetra == ' ' in strTexto:
-        strTeste = None
-    else:
-        strTeste += 
+while strPalavra != strTeste:
+    for strPalavraTeste in strTexto: # vai "capturar" cada caractere do texto
+        if strPalavraTeste == ' ' in strTexto:
+            strTeste = None
+        else:
+            strTeste += strTexto[strPalavraTeste]
+'''
