@@ -1,4 +1,4 @@
-strTexto = input('Digite um texto: ')
+strTexto = input('Digite um texto: ').upper()
 
 strVogais = 'AEIOUÂÊÎÔÛÁÉÍÓÚÀÈÌÒÙÄËÏÖÜ'
 intVogais = 0
