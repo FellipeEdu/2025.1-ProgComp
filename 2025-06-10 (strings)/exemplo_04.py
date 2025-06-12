@@ -33,13 +33,15 @@ strTexto = 'Python é uma linguagem de programação de alto nível, interpretad
    'do mundo da programação, sendo ideal tanto para projetos simples quanto para sistemas de grande escala. Seu crescimento constante ' \
    'e sua capacidade de adaptação a novas demandas tecnológicas garantem que Python continuará sendo uma peça central no futuro da computação.'
 
+# O PROF DIVIDIU CADA CODIGO ABAIXO DA AULA DO DIA 11/06/25 EM OUTROS, ESTÃO NA PASTA "2025-11-06"
 
 strPalavra = input('Digite Palavra: ').lower().strip()
 
-intTamanho = len(strTexto)
-print(f'\nO texto possui {intTamanho} caracteres.')
+'''intTamanho = len(strTexto)
+print(f'\nO texto possui {intTamanho} caracteres.')'''
 
 intQtOcorrencias = strTexto.lower().count(strPalavra)
+
 print(f'A palavra {strPalavra} aparece {intQtOcorrencias} vez(es) no texto.')
 
 '''# verificar a posição
