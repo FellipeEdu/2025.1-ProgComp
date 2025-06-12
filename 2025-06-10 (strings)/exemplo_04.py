@@ -34,8 +34,33 @@ strTexto = 'Python é uma linguagem de programação de alto nível, interpretad
    'e sua capacidade de adaptação a novas demandas tecnológicas garantem que Python continuará sendo uma peça central no futuro da computação.'
 
 
-strPalavra = input('Digite Palavra: ').upper()
+strPalavra = input('Digite Palavra: ').lower().strip()
 
+intTamanho = len(strTexto)
+print(f'\nO texto possui {intTamanho} caracteres.')
+
+intQtOcorrencias = strTexto.lower().count(strPalavra)
+print(f'A palavra {strPalavra} aparece {intQtOcorrencias} vez(es) no texto.')
+
+'''# verificar a posição
+intPosicao = strTexto.lower().find(strPalavra)
+print(intPosicao)
+
+intPosicao = strTexto.lower().find(strPalavra, intPosicao + 1)
+print(intPosicao)'''
+
+intPosicao = 0
+while True:
+    intPosicao = strTexto.lower().find(strPalavra, intPosicao)
+
+    if intPosicao == -1: 
+        break
+
+    print(intPosicao)
+
+    intPosicao += len(strPalavra)
+
+'''
 intContPalavra = 0
 
 for strTermos in strTexto.upper():
@@ -43,6 +68,7 @@ for strTermos in strTexto.upper():
         intContPalavra += 1
 
 print(f'O texto possui {intContPalavra} palavras {strPalavra}.')
+'''
 
 '''
 strTeste = None
