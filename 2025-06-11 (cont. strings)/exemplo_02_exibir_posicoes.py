@@ -51,4 +51,4 @@ while True:
 
    print(intPosicao)
 
-   intPosicao += len(strPalavra)
+   intPosicao += len(strPalavra) # esta soma evita que encontre a mesma ocorrência  novamente!
