@@ -7,7 +7,6 @@ print(f'Cifra com deslocamento {intDeslocamento}: ', end='')
 
 for contador in range(0, len(strPalavra)):
 
-    intCorrecao = 0
     intString = ord(strPalavra[contador]) + intDeslocamento
 
     if (intString) > 126:
