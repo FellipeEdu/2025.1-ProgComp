@@ -26,6 +26,7 @@ while True:
             lstAlunos.append(strNome)
             lstNotas_1.append(intNota_1)
             lstNotas_2.append(intNota_2)
+            # TO DO: add em cada aluno a media, seguindo a formula do IFRN
 
 print(lstAlunos)
 print(lstNotas_1)
