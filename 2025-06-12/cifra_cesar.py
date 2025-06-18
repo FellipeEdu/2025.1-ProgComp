@@ -10,8 +10,12 @@ for contador in range(0, len(strPalavra)):
     intString = ord(strPalavra[contador]) + intDeslocamento
 
     if (intString) > 126:
-        intCorrecao = (intString - 127) + 33
-        strCifra = chr(intCorrecao)
+        intCorrecao = (intString - 127)
+        if intCorrecao >= 33:
+            strCifra = chr(intCorrecao)
+        else:
+            intCorrecao += 33
+            strCifra = chr(intCorrecao)
     else:
         strCifra = chr(intString)
 
