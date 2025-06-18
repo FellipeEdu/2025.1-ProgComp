@@ -7,7 +7,8 @@ while True:
 
     if strNome.lower() == 'fim': 
         break
-
+    
+    # TO DO: quando ocorrer algum erro nas notas o programa deve voltar para pedir a partir das notas
     try:
         intNota_1 = int(input('Digite a nota 1: '))
         intNota_2 = int(input('Digite a nota 2: '))
@@ -21,6 +22,7 @@ while True:
         elif intNota_2 >= 0 and intNota_2 <= 100:
             print('ERRO: Nota inválida. Informe entre 0 e 100')
         else:
+            # TO DO: add o nome e as notas dos alunos apenas na lista lstAlunos
             lstAlunos.append(strNome)
             lstNotas_1.append(intNota_1)
             lstNotas_2.append(intNota_2)
