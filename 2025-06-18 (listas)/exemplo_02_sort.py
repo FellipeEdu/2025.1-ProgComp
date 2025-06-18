@@ -3,7 +3,7 @@ Fazer umporgrama que solicite ao usuario nomes de pessoas.
 
 O programa deverá parar de solicitar nomes quando o usuário digitar 'FIM'
 
-No final o programa deverá listar os nomes informados.
+No final o programa deverá listar os nomes informados em ordem alfabetica.
 '''
 
 lstNomes = list()
@@ -16,5 +16,8 @@ while True:
 
     if len(strNome) > 0:
         lstNomes.append(strNome)
+
+#lstNomes.sort()
+lstNomes.sort(reverse = True)
 
 print(lstNomes)
