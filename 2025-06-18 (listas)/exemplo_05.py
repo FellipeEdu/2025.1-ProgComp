@@ -17,9 +17,9 @@ while True:
     except Exception as e:
         print(f'ERRO: {e}')
     else:
-        if intNota_1 >= 0 and intNota_1 <= 100:
+        if intNota_1 < 0 and intNota_1 > 100:
             print('ERRO: Nota inválida. Informe entre 0 e 100')
-        elif intNota_2 >= 0 and intNota_2 <= 100:
+        elif intNota_2 < 0 and intNota_2 > 100:
             print('ERRO: Nota inválida. Informe entre 0 e 100')
         else:
             # TO DO: add o nome e as notas dos alunos apenas na lista lstAlunos
