@@ -8,4 +8,5 @@ for strLetra in strTexto:
 intPosicao = 0
 
 while intPosicao < len(strTexto):
-    
+    print(strTexto[intPosicao])
+    intPosicao += 1
