@@ -5,9 +5,9 @@ strCifra = ''
 
 print(f'Cifra com deslocamento {intDeslocamento}: ', end='')
 
-for letra in strPalavra: # de 'in range(0, len(strPalavra))' para 'in strPalavra'
+for letra in strPalavra: # de "in range(0, len(strPalavra))" para "in strPalavra"
 
-    intString = ord(strPalavra[letra]) + intDeslocamento
+    intString = ord(letra) + intDeslocamento # de "(strPalavra[letra])" para "ord(letra)"
 
     if (intString) > 126:
         intCorrecao = (intString - 127)
