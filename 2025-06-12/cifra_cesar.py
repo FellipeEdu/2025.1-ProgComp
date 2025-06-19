@@ -5,7 +5,7 @@ strCifra = ''
 
 print(f'Cifra com deslocamento {intDeslocamento}: ', end='')
 
-for letra in range(0, len(strPalavra)):
+for letra in strPalavra: # de 'in range(0, len(strPalavra))' para 'in strPalavra'
 
     intString = ord(strPalavra[letra]) + intDeslocamento
 
