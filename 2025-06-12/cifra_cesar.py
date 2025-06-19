@@ -17,6 +17,6 @@ for letra in strPalavra: # de "in range(0, len(strPalavra))" para "in strPalavra
             intCorrecao += 33
             strCifra = chr(intCorrecao)
     else:
-        strCifra = chr(intString)
+        strCifra += chr(intString)
 
-    print(strCifra, end='')
+print(strCifra, end='') # agora com o print fora do FOR, exibindo de uma vez a strCifra
