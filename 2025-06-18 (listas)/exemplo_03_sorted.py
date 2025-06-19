@@ -18,7 +18,7 @@ while True:
         lstNomes.append(strNome)
 
 #lstNomes.sort()
-lstNomesOrdenados = sorted(lstNomes, reverse = True)
+lstNomesOrdenados = sorted(lstNomes) # reverse = True
 
 print(lstNomes)
 print(lstNomesOrdenados)
