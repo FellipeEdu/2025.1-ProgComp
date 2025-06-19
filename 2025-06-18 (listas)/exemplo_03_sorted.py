@@ -1,5 +1,5 @@
 '''
-Fazer umporgrama que solicite ao usuario nomes de pessoas.
+Fazer um programa que solicite ao usuario nomes de pessoas.
 
 O programa deverá parar de solicitar nomes quando o usuário digitar 'FIM'
 
@@ -18,6 +18,7 @@ while True:
         lstNomes.append(strNome)
 
 #lstNomes.sort()
-lstNomes.sort(reverse = True)
+lstNomesOrdenados = sorted(lstNomes, reverse = True)
 
 print(lstNomes)
+print(lstNomesOrdenados)
