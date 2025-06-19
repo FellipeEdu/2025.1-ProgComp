@@ -22,10 +22,12 @@ while True:
         else:
             if intNota_1 < 0 or intNota_1 > 100:
                 print('ERRO: Nota inválida. Informe entre 0 e 100')
-                intNota_1 = None
+                intNota_1 = None # atribui None à intNota pra retornar para o while antes do try
+
             elif intNota_2 < 0 or intNota_2 > 100:
                 print('ERRO: Nota inválida. Informe entre 0 e 100')
-                intNota_2 = None
+                intNota_2 = None # atribui None à intNota pra retornar para o while antes do try
+                
             else:
                 # TO DO: add o nome e as notas dos alunos apenas na lista lstAlunos
                 lstAlunos.append(strNome)
