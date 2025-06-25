@@ -17,7 +17,6 @@ while True:
     if len(strNome) > 0:
         lstNomes.append(strNome)
 
-#lstNomes.sort()
 lstNomes.sort()
 
 for strNome in lstNomes:

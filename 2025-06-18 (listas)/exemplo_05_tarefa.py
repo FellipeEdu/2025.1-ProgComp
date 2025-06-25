@@ -31,10 +31,15 @@ while True:
             else:
                 # TO DO: add o nome e as notas dos alunos apenas na lista lstAlunos
                 lstAlunos.append(strNome)
-                lstNotas_1.append(intNota_1)
-                lstNotas_2.append(intNota_2)
+                #lstNotas_1.append(intNota_1)
+                #lstNotas_2.append(intNota_2)
+
+                lstAlunos.append(intNota_1)
+                lstAlunos.append(intNota_2)
                 # TO DO: add em cada aluno a media, seguindo a formula do IFRN
+                media_IF = int(((intNota_1 * 2) + (intNota_2 * 3)) / 5)
+                lstAlunos.append(media_IF)
 
 print(lstAlunos)
-print(lstNotas_1)
-print(lstNotas_2)
+#print(lstNotas_1)
+#print(lstNotas_2)
