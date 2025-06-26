@@ -12,7 +12,6 @@ except Exception as excecao:
     sys.exit(f'\nERRO: {excecao}')
 
 else:
-    #lstNumeros = list(random.randint(-100, 100) for _ in numero)
     lstNumeros = list()
     lstPares = list()
 
