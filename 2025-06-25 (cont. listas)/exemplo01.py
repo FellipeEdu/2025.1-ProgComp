@@ -1,6 +1,5 @@
 import sys, random
 
-
 try:
     numero = int(input('Digite o valor de N: '))
     if not (1 <= numero <= 100):
