@@ -20,9 +20,9 @@ else:
     for _ in range(numero):
         lstNumeros.append(random.randint(-100, 100))
 
-        for pares in range(len(lstNumeros)):
-            if lstNumeros[pares] % 2 == 0:
-                lstPares.append(lstNumeros[pares])
+    for pares in range(len(lstNumeros)):
+        if lstNumeros[pares] % 2 == 0:
+            lstPares.insert(pares, lstNumeros[pares])
 
-    print(f'{lstNumeros}\n')       
+    print(f'{lstNumeros}\n')
     print(lstPares)
