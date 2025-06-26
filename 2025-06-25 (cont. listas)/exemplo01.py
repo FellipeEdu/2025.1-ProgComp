@@ -20,7 +20,7 @@ else:
 
     for pares in range(len(lstNumeros)):
         if lstNumeros[pares] % 2 == 0:
-            lstPares.insert(pares, lstNumeros[pares])
+            lstPares.append(lstNumeros[pares])
 
     print(f'{lstNumeros}\n')
     print(lstPares)

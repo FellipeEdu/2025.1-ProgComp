@@ -19,7 +19,7 @@ else:
         lstNumeros.append(random.randint(0, 1000))
 
     for quadrados in range(len(lstNumeros)):
-        lstQuadrados.insert(quadrados, lstNumeros[quadrados] ** 0.5)
+        lstQuadrados.append(lstNumeros[quadrados] ** 0.5)
 
     print(f'{lstNumeros}\n')
     print(lstQuadrados)
