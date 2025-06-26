@@ -22,4 +22,4 @@ else:
         lstQuadrados.insert(quadrados, lstNumeros[quadrados] ** 0.5)
 
     print(f'{lstNumeros}\n')
-    print({lstQuadrados})
+    print(lstQuadrados)
