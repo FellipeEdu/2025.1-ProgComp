@@ -26,3 +26,4 @@ else:
 
     print(f'{lstNumeros}\n')       
     print(lstPares)
+    
