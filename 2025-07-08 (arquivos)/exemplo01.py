@@ -1,5 +1,9 @@
+import os
+
+strDir = os.path.dirname(__file__)
+
 try:
-    arqLeitura = open('carta.txt', 'r')
+    arqLeitura = open(f'{strDir}\\carta.txt', 'r')
 
 except FileNotFoundError:
     print('ERRO: Arquivo não encontrado.')
