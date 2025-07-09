@@ -29,5 +29,14 @@ else:
         # add dados na lst
         lstTimes.append(lstAux)
     arqLeitura.close()
+# add pontuacaoe saldo de gols
+for time in lstTimes:
+    time.insert(4, time[1]*3 + time[2])
+    time.append(time[5] - time[6])
 
-print(lstTimes)
+# classificando os times
+lstTimes.sort(key=lambda time: (time[4], time[1], time[7], time[5]), reverse=True)
+
+#print(lstTimes)
+for time in lstTimes:
+    print(time)
