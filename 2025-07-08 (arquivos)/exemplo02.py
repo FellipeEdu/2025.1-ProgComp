@@ -17,8 +17,8 @@ else:
 
     while True:
         # Lendo a linha e armazenando na variavel
-        strLinha = arqLeitura.readline()
-        
+        strLinha = arqLeitura.readline().strip()
+
         # interrompe o laço quando nao ha conteudo na linha (EOF)
         if not strLinha: break
 
