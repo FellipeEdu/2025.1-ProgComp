@@ -10,6 +10,7 @@ strCriptografada = ''
 
 print(f'Texto original:\n{strTexto}\n')
 
+indiceCripto = 0
 for letra in range(len(strTexto)):
     if indiceCripto == len(strCaracteres) - 1: indiceCripto = 0
     strCriptografada += strCaracteres[indiceCripto]
@@ -19,10 +20,10 @@ for letra in range(len(strTexto)):
 strCriptografadaChaveada = ''
 for letra in strTexto:
     #letraTemporaria = strCaracteres.find(letra)
-    letraTemporaria = strCriptografada.find(letra)
+    letraTemporaria = strCriptografada.find(letra) 
     strAlfabeto = strCaracteres[letraTemporaria:] + strCaracteres[:letraTemporaria]
 
-    strTemporaria = strAlfabeto[strCaracteres.find(letra)]
-    strCriptografadaChaveada += strTemporaria
+    segLetraTemporaria = strAlfabeto[strCaracteres.find(letra)]
+    strCriptografadaChaveada += segLetraTemporaria
 
 print(f'Texto criptografado:\n{strCriptografadaChaveada}\n')
