@@ -14,7 +14,7 @@ except Exception as excecao:
 
 else:
     lstTimes = list()
-    lstCabecalho = list()
+    lstCabecalho = arqLeitura.readline().strip().split(';')
 
     while True:
         # Lendo a linha e armazenando na variavel
