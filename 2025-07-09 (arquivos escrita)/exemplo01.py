@@ -44,7 +44,7 @@ for time in lstTimes:
 '''
 # salvando lst em um arquivo
 arqEscrita = open(f'{strDir}\\times_classificacao.csv', 'w', encoding='utf-8')
-arqEscrita.write(f'{strCabecalho}\n')
+arqEscrita.write(f'{lstCabecalho}\n')
 for time in lstTimes:
     strLinha = ';'.join(str(i) for i in time)
     arqEscrita.write(f'{strLinha}\n')
