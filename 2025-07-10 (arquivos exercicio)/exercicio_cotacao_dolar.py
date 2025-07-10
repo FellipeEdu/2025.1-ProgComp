@@ -47,8 +47,8 @@ else:
    arqLeitura.close()
 
 for cotacoes in lstCotacao:
-   cotacoes[0] = float(cotacoes[0].replace(';','.'))
-   cotacoes[1] = float(cotacoes[1].replace(';','.'))
+   valor01 = float(cotacoes[0].replace(';','.'))
+   valor02 = float(cotacoes[1].replace(';','.'))
 
 print(lstCabecalho)
 for cotacoes in lstCotacao:
