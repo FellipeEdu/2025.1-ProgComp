@@ -16,10 +16,10 @@
 
    3) Gerar arquivos por ano com as médias das cotações mensais. Salve os arquivos com 
       o nome "media_cotacao_nnnn.csv" onde "nnnn" corresponde ao ano. Cada linha do arquivo
-      deverá ter o nome do mês e em seguida o valor médio da cotação. Separe os valores da 
-      linha por ";";
+      deverá ter o valor médio de compra, o valor médio de venda e o nome do mês e fixar os 
+      valores com 4 casas decimais. Separe os valores da linha por ";";
 '''
-import os, sys
+import os, sys, statistics; from datetime import datetime
 
 # Obtendo o diretório onde o programa está salvo
 strDir = os.path.dirname(__file__)
@@ -40,7 +40,23 @@ else:
       # Interrompe o laço quando não há conteúdo na linha (EOF)
       if not strLinha: break
       # Transforma a string em uma lista convertendo os valores para inteiro
-      lstAux = [float(i) if i.isdigit() else i for i in strLinha.split(';')]
+      lstAux = [linha for linha in strLinha.split(';')]
+      #lstAux = [float(i) if i.isdigit() else i for i in strLinha.split(';')]
       # Adicionando os dados na lista
       lstCotacao.append(lstAux)
    arqLeitura.close()
+
+for cotacoes in lstCotacao:
+   cotacoes[0] = float(cotacoes[0].replace(';','.'))
+   cotacoes[1] = float(cotacoes[1].replace(';','.'))
+
+print(lstCabecalho)
+for cotacoes in lstCotacao:
+   print(cotacoes)
+
+'''arqEscrita = open(f'{strDir}\\cotacao_dolar_novo.csv', 'w', encoding='utf-8')
+arqEscrita.write(f'{lstCabecalho}\n')
+for cotacao in lstCotacao:
+    strLinha = ';'.join(str(i) for i in cotacao)
+    arqEscrita.write(f'{strLinha}\n')
+arqEscrita.close()'''
