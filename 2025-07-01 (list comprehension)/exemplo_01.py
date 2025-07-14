@@ -11,35 +11,28 @@
 import sys, random
 
 try:
-   intN = int(input('Informe o valor de N: '))
+    numero = int(input('Digite o valor de N: '))
+    if not (1 <= numero <= 100):
+        sys.exit('\nERRO: informe um valor positivo e até 100')
+
 except ValueError:
-   sys.exit('\nERRO: Informe um valor inteiro válido...\n')
-except Exception as erro:
-   sys.exit(f'\nERRO: {erro}...\n')
+    sys.exit('\nERRO: informe um valor inteiro válido.')
+
+except Exception as excecao:
+    sys.exit(f'\nERRO: {excecao}')
+
 else:
-   if intN <= 0 or intN > 100:
-      sys.exit('\nERRO: Informe um valor entre 1 e 100...\n')
+    lstNumeros = list()
+    lstPares = list()
 
-    # ----------------------------------------------------------------------
-    # Item 02
-   '''
-   lstValores = list()
-   for _ in range(intN):
-      intValor = random.randint(-100, 100)
-      lstValores.append(intValor)
-   '''
-   lstValores = [ random.randint(-100, 100) for _ in range(intN) ]
+    '''
+    for _ in range(numero):
+        lstNumeros.append(random.randint(-100, 100))
 
-   print(lstValores)
+    for pares in range(len(lstNumeros)):
+        if lstNumeros[pares] % 2 == 0:
+            lstPares.append(lstNumeros[pares])
+    '''
 
-   # ----------------------------------------------------------------------
-   # Item 03
-   '''
-   lstPares = list()
-   for intValor in lstValores:
-      if intValor % 2 == 0:
-         lstPares.append(intValor)
-   '''
-   lstPares = [ intValor for intValor in lstValores if intValor % 2 == 0 ]
-   
-   print(lstPares)
+    print(f'{lstNumeros}\n')       
+    print(lstPares)
