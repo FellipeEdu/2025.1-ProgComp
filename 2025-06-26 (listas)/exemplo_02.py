@@ -53,3 +53,6 @@ lstTimes.sort(key=lambda time: (time[4], time[1], ), reverse=True)
 
 # ----------------------------------------------------------------------
 # Questão 03
+
+for time in lstTimes:
+   print(time)
