@@ -12,14 +12,14 @@ except Exception as excecao:
     sys.exit(f'\nERRO: {excecao}')
 
 else:
-    lstNumeros = list()
+    lstNumeros = random.sample(range(1001), numero) #random.randint(0, 1000)
     lstQuadrados = list()
 
-    for _ in range(numero):
-        lstNumeros.append(random.randint(0, 1000))
+    # for _ in range(numero):
+    #    lstNumeros.append(random.randint(0, 1000))
 
-    for quadrados in range(len(lstNumeros)):
-        lstQuadrados.append(lstNumeros[quadrados] ** 0.5)
+    for numeros in lstNumeros:
+        lstQuadrados.append(numeros ** 0.5)
 
     print(f'{lstNumeros}\n')
     print(lstQuadrados)
