@@ -4,7 +4,7 @@ import os
 strDir = os.path.dirname(__file__)
 
 try:
-    arqLeitura = open(f'{strDir}\\times_header.csv', 'r', encoding='utf-8')
+    arqLeitura = open(f'{strDir}\\times.csv', 'r', encoding='utf-8')
 
 except FileNotFoundError:
     print('ERRO: Arquivo não encontrado.')
@@ -14,7 +14,6 @@ except Exception as excecao:
 
 else:
     lstTimes = list()
-    lstCabecalho = arqLeitura.readline().strip().split(';')
 
     while True:
         # Lendo a linha e armazenando na variavel
@@ -30,19 +29,14 @@ else:
         # add dados na lst
         lstTimes.append(lstAux)
     arqLeitura.close()
-
 # add pontuacao e saldo de gols
 for time in lstTimes:
     time.insert(4, time[1]*3 + time[2])
     time.append(time[5] - time[6])
 
-#
-lstCabecalho.insert(4, 'Pontuação')
-lstCabecalho.append('Saldo de Gols')
-
 # classificando os times
 lstTimes.sort(key=lambda time: (time[4], time[1], time[7], time[5]), reverse=True)
 
-print(lstCabecalho)
+#print(lstTimes)
 for time in lstTimes:
     print(time)

@@ -12,7 +12,7 @@ except Exception as excecao:
     print(f'ERRO: {excecao}.')
 
 else:
-    '''strConteudo = arqLeitura.readline()
+    '''strConteudo = arqLeitura.read()
 
     arqLeitura.close()
 
@@ -22,7 +22,8 @@ else:
         strConteudo = arqLeitura.readline()
         if not strConteudo: break
         #print(strConteudo)
-        print('=' * 80)
+        # para cada linha do arquivo txt (incluindo o '\n') ele vai imprimir os '-'
+        print('-' * 80)
         print(strConteudo.strip())
 
     arqLeitura.close()
