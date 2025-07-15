@@ -35,23 +35,22 @@ else:
    lstCotacao = list()
    lstCabecalho = arqLeitura.readline().strip().split(';')
    while True:
-      # Lendo a linha e armazendo na variável
+      # Lendo a linha e armazenando na variável
       strLinha = arqLeitura.readline().strip()   
       # Interrompe o laço quando não há conteúdo na linha (EOF)
       if not strLinha: break
-      # Transforma a string em uma lista convertendo os valores para inteiro
+      # Transforma a string em uma lista
       lstAux = [linha for linha in strLinha.split(';')]
       #lstAux = [float(i) if i.isdigit() else i for i in strLinha.split(';')]
       # Adicionando os dados na lista
       lstCotacao.append(lstAux)
+      for cotacoes in lstCotacao:
+         cotacoes[0].replace(',','.')
+         cotacoes[1].replace(',','.')
    arqLeitura.close()
 
-for cotacoes in lstCotacao:
-   valor01 = float(cotacoes[0].replace(';','.'))
-   valor02 = float(cotacoes[1].replace(';','.'))
-
 print(lstCabecalho)
-for cotacoes in lstCotacao:
+for cotacoes in lstCotacao[:10]:
    print(cotacoes)
 
 '''arqEscrita = open(f'{strDir}\\cotacao_dolar_novo.csv', 'w', encoding='utf-8')
