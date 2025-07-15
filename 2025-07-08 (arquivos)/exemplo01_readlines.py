@@ -12,17 +12,8 @@ except Exception as excecao:
     print(f'ERRO: {excecao}.')
 
 else:
-    '''strConteudo = arqLeitura.readline()
+    lstConteudo = arqLeitura.readlines()
 
     arqLeitura.close()
 
-    print(strConteudo)'''
-
-    while True:
-        strConteudo = arqLeitura.readline()
-        if not strConteudo: break
-        #print(strConteudo)
-        print('=' * 80)
-        print(strConteudo.strip())
-
-    arqLeitura.close()
+    print(lstConteudo)
