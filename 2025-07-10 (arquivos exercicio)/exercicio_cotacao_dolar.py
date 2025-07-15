@@ -43,15 +43,16 @@ else:
       lstAux = [linha for linha in strLinha.split(';')]
       #lstAux = [float(i) if i.isdigit() else i for i in strLinha.split(';')]
       # Adicionando os dados na lista
-      lstCotacao.append(lstAux)
-      for cotacoes in lstCotacao:
-         cotacoes[0].replace(',','.')
-         cotacoes[1].replace(',','.')
+      cotCompra = float(lstAux[0].replace(',','.'))
+      cotVenda = float(lstAux[1].replace(',', '.'))
+      dataCot = datetime.strptime(lstAux[2], '%d/%m/%Y').date()
+      lstCotacao.append([cotCompra, cotVenda, dataCot])
+
    arqLeitura.close()
 
 print(lstCabecalho)
-for cotacoes in lstCotacao[:10]:
-   print(cotacoes)
+for cotacoes in lstCotacao:
+   print(f'{cotacoes[0]:.3f}, {cotacoes[1]:.3f}, {cotacoes[2].strftime('%d/%m/%Y')}')
 
 '''arqEscrita = open(f'{strDir}\\cotacao_dolar_novo.csv', 'w', encoding='utf-8')
 arqEscrita.write(f'{lstCabecalho}\n')
