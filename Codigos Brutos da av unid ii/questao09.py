@@ -34,8 +34,9 @@ indiceCripto = 0
 # criptografar com a primeira chave
 chaveCripto = ''
 for letra in range(len(strTexto[-9:])):
+    print(letra, end='; ')
     letraTemp = strCaracteres.find(strTexto[letra])
-    print(letraTemp)
+    print(letraTemp, end='; ')
     alfabetoTemp = strCaracteres[letraTemp:] + strCaracteres[:letraTemp]
     print(alfabetoTemp)
     chaveCripto += alfabetoTemp[strCaracteres.find(strCaracteres[letraTemp])]
