@@ -22,6 +22,7 @@ else:
         strConteudo = arqLeitura.readline()
         if not strConteudo: break
         #print(strConteudo)
+        # para cada linha do arquivo txt (incluindo o '\n') ele vai imprimir os '-'
         print('-' * 80)
         print(strConteudo.strip())
 
