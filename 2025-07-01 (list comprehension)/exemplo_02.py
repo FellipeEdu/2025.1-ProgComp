@@ -1,4 +1,4 @@
-import sys, random
+import sys, random, math
 
 try:
     numero = int(input('Digite o valor de N (0 a 100): '))
@@ -12,14 +12,17 @@ except Exception as excecao:
     sys.exit(f'\nERRO: {excecao}')
 
 else:
-    lstNumeros = random.sample(range(1001), numero) #random.randint(0, 1000)
+    lstNumeros = random.sample(range(1001), numero) #random.randint(0, 1000) / random.sample() retorna uma lista ao invés de apenas um int
     lstQuadrados = list()
 
     # for _ in range(numero):
     #    lstNumeros.append(random.randint(0, 1000))
 
+    '''
     for numeros in lstNumeros:
         lstQuadrados.append(numeros ** 0.5)
+    '''
+    lstQuadrados = [math.sqrt(numeros) for numeros in lstNumeros] # ou numeros ** 0.5
 
     print(f'{lstNumeros}\n')
     print(lstQuadrados)
