@@ -16,12 +16,17 @@ else:
     lstNumeros = list()
     lstTrios = list()
 
+    '''
     for _ in range(numero):
         valor = random.randint(-100, 100)
 
         lstNumeros.append(valor)
 
         lstTrios.append([valor -1, valor, valor + 1])
+    '''
+    lstNumeros = [random.randint(-100, 100) for _ in range(numero)]
+
+    lstTrios = [[valor - 1, valor, valor + 1] for valor in lstNumeros]
 
     print(lstNumeros)
 
