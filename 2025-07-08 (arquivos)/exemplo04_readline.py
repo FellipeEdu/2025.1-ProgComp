@@ -21,8 +21,9 @@ else:
     while True:
         strConteudo = arqLeitura.readline()
         if not strConteudo: break
-        #print(strConteudo)
-        print('-' * 80)
-        print(strConteudo.strip())
+        # retirando os traços (-) e '\n' a mais que estavam sendo gerados em cada paragrafo
+        strConteudo = strConteudo.strip()
+        if strConteudo: print('\n' + '-'*80)
+        print(strConteudo, end='')
 
     arqLeitura.close()
