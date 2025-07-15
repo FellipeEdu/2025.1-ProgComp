@@ -33,6 +33,9 @@ else:
         if lstNumeros[pares] % 2 == 0:
             lstPares.append(lstNumeros[pares])
     '''
+    lstNumeros = [random.randint(-100, 100) for _ in range(numero)]
+
+    lstPares = [pares for pares in lstNumeros if pares % 2 == 0]
 
     print(f'{lstNumeros}\n')       
     print(lstPares)
