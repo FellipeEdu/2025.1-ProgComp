@@ -32,7 +32,7 @@ except FileNotFoundError:
 except Exception as erro:
    sys.exit(f'\nERRO: {erro}')
 else:
-   lstCotacao = list()
+   lstCotacoes = list()
    lstCabecalho = arqLeitura.readline().strip().split(';')
    while True:
       # Lendo a linha e armazenando na variável
@@ -46,22 +46,24 @@ else:
       cotCompra = float(lstAux[0].replace(',','.'))
       cotVenda = float(lstAux[1].replace(',', '.'))
       dataCot = datetime.strptime(lstAux[2], '%d/%m/%Y').date()
-      lstCotacao.append([cotCompra, cotVenda, dataCot])
+      lstCotacoes.append([cotCompra, cotVenda, dataCot])
 
    arqLeitura.close()
 
+# classificando lstCotacao pelo ano
+lstCotacoes.sort(key=lambda cotacao: (cotacao[2].year, cotacao[2].month, cotacao[2].day))
+
 print(lstCabecalho)
-for cotacoes in lstCotacao[:20]:
+for cotacoes in lstCotacoes:
    print(f"{cotacoes[0]:.3f}, {cotacoes[1]:.3f}, {cotacoes[2].strftime('%d/%m/%Y')}")
 
 
-for cotacoesLinha in lstCotacao[:20]:
-   ano = cotacoesLinha[2].year()
+'''for cotacoesLinha in lstCotacao[:10]:
+   ano = cotacoesLinha[2].year
    arqEscrita = open(f'{strDir}\\cotacao_dolar_{ano}.csv', 'w', encoding='utf-8')
    arqEscrita.write(f'{lstCabecalho}\n')
-
    
-   linha = ';'.join(i for i in cotacoesLinha)
+   linha = ';'.join(str(i) for i in cotacoesLinha)
    arqEscrita.write(f'{linha}\n')
 
-arqEscrita.close()
+arqEscrita.close()'''
