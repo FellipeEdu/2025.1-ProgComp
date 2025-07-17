@@ -57,8 +57,9 @@ print(lstCabecalho)
 for cotacoes in lstCotacoes:
    print(f"{cotacoes[0]:.3f}, {cotacoes[1]:.3f}, {cotacoes[2].strftime('%d/%m/%Y')}")
 
+for 
 
-'''for cotacoesLinha in lstCotacao[:10]:
+for cotacoesLinha in lstCotacoes:
    ano = cotacoesLinha[2].year
    arqEscrita = open(f'{strDir}\\cotacao_dolar_{ano}.csv', 'w', encoding='utf-8')
    arqEscrita.write(f'{lstCabecalho}\n')
@@ -66,4 +67,4 @@ for cotacoes in lstCotacoes:
    linha = ';'.join(str(i) for i in cotacoesLinha)
    arqEscrita.write(f'{linha}\n')
 
-arqEscrita.close()'''
+arqEscrita.close()
