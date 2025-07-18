@@ -61,18 +61,13 @@ for ano in lstAnos:
    arqEscrita = open(f'{strDir}\\cotacao_dolar_{ano}.csv', 'w', encoding='utf-8')
    arqEscrita.write(f'{lstCabecalho}\n')
 
+   arqEscrMedia = open(f'{strDir}\\media_cotacao_{ano}.csv', 'w', encoding='utf-8')
+   arqEscrMedia.write('Valor Médio Compra ; Valor Médio Venda ; Mês')
+
    for cotacao in lstCotacoes:
       if cotacao[2].year == ano:
          linha = ';'.join(str(i) for i in cotacao)
          arqEscrita.write(f'{linha}\n')
+
+      
    arqEscrita.close()
-
-'''for cotacoesLinha in lstCotacoes:
-   ano = cotacoesLinha[2].year
-   arqEscrita = open(f'{strDir}\\cotacao_dolar_{ano}.csv', 'w', encoding='utf-8')
-   arqEscrita.write(f'{lstCabecalho}\n')
-   
-   linha = ';'.join(str(i) for i in cotacoesLinha)
-   arqEscrita.write(f'{linha}\n')
-
-arqEscrita.close()'''
