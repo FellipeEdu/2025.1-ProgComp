@@ -41,7 +41,6 @@ else:
       if not strLinha: break
       # Transforma a string em uma lista
       lstAux = [linha for linha in strLinha.split(';')]
-      #lstAux = [float(i) if i.isdigit() else i for i in strLinha.split(';')]
       # Adicionando os dados na lista
       cotCompra = float(lstAux[0].replace(',','.'))
       cotVenda = float(lstAux[1].replace(',', '.'))
@@ -52,14 +51,23 @@ else:
 
 # classificando lstCotacao pelo ano
 lstCotacoes.sort(key=lambda cotacao: (cotacao[2].year, cotacao[2].month, cotacao[2].day))
+lstAnos = [ano[2].year for ano in lstCotacoes]
 
-print(lstCabecalho)
-for cotacoes in lstCotacoes:
-   print(f"{cotacoes[0]:.3f}, {cotacoes[1]:.3f}, {cotacoes[2].strftime('%d/%m/%Y')}")
+'''print(lstCabecalho)
+for cotacoes in lstCotacoes[:5]:
+   print(f"{cotacoes[0]:.3f}, {cotacoes[1]:.3f}, {cotacoes[2]}")'''
 
-for 
+for ano in lstAnos:
+   arqEscrita = open(f'{strDir}\\cotacao_dolar_{ano}.csv', 'w', encoding='utf-8')
+   arqEscrita.write(f'{lstCabecalho}\n')
 
-for cotacoesLinha in lstCotacoes:
+   for cotacao in lstCotacoes:
+      if cotacao[2].year == ano:
+         linha = ';'.join(str(i) for i in cotacao)
+         arqEscrita.write(f'{linha}\n')
+   arqEscrita.close()
+
+'''for cotacoesLinha in lstCotacoes:
    ano = cotacoesLinha[2].year
    arqEscrita = open(f'{strDir}\\cotacao_dolar_{ano}.csv', 'w', encoding='utf-8')
    arqEscrita.write(f'{lstCabecalho}\n')
@@ -67,4 +75,4 @@ for cotacoesLinha in lstCotacoes:
    linha = ';'.join(str(i) for i in cotacoesLinha)
    arqEscrita.write(f'{linha}\n')
 
-arqEscrita.close()
+arqEscrita.close()'''
