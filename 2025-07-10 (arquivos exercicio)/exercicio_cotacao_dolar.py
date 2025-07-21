@@ -49,8 +49,9 @@ else:
 
    arqLeitura.close()
 
-# classificando lstCotacao pelo ano
+# ordenando lstCotacao pela data crescente
 lstCotacoes.sort(key=lambda cotacao: (cotacao[2].year, cotacao[2].month, cotacao[2].day))
+# criando lista apenas com os valores de anos para usar na criação das listas para cada ano
 lstAnos = [ano[2].year for ano in lstCotacoes]
 
 '''print(lstCabecalho)
