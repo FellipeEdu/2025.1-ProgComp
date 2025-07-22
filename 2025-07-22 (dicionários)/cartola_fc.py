@@ -28,9 +28,13 @@ else:
     dictCartola['status']   -> dicionário (k:v)
     dictCartola['atletas']  -> lista (índice -> dicionário (k:v))
     '''
+    lstAux = dictCartola['clubes']
     #print(lstChaves)
 
+    print(lstAux)
+
     # conteudo de cada chave
-    print(dictCartola['atletas'])
+    #print(dictCartola['atletas'])
+
 finally:
-    print('FIM DO PROGRAMA...')
+    print('\nFIM DO PROGRAMA...')
