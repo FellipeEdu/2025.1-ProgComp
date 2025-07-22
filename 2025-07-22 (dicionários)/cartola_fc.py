@@ -28,6 +28,8 @@ else:
     dictCartola['status']   -> dicionário (k:v)
     dictCartola['atletas']  -> lista (índice -> dicionário (k:v))
     '''
+    # Informando o nome do clube
+    strClube = input('Informe o nome do Clube: ').strip().lower() 
     lstAux = dictCartola['clubes']
     #print(lstChaves)
 
