@@ -27,8 +27,8 @@ print(f'Primeira chave:\n{chaveCripto}\n')
 # criar alfabeto cifrado
 for letra in strTexto: # usando range(), pois strTexto e strCriptografada tem o mesmo tam
     if indiceCripto == len(chaveCripto): indiceCripto = 0
-    letraTemporaria = strCaracteres.find(letra) # 'L'
-    strAlfabeto = strCaracteres[letraTemporaria:] + strCaracteres[:letraTemporaria] # 'LMNOPQR [...] EFGHIJK'
+    letraTemp = strCaracteres.find(letra) # 'L'
+    strAlfabeto = strCaracteres[letraTemp:] + strCaracteres[:letraTemp] # 'LMNOPQR [...] EFGHIJK'
     # procura em strAlfabeto a letra do atual indiceCripto em chaveCripto
     # ex: strCriptografada = strAlfabeto[....find(Á)] = Ì
     strCriptografada += strAlfabeto[strCaracteres.find(chaveCripto[indiceCripto])]
