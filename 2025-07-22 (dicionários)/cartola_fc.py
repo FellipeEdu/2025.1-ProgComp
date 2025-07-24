@@ -21,16 +21,22 @@ else:
     lstChaves = list(dictCartola.keys()) # ['clubes', 'posicoes', 'status', 'atletas']
 
     '''
-    dictCartola = {'clubes': {...}, 'posicoes': {...}, 'status': {...}, 'atletas': {...} }
+        dictCartola = {'clubes': {...}, 'posicoes': {...}, 'status': {...}, 'atletas': {...} }
 
-    dictCartola['clubes']   -> dicionário (k:v)
-    dictCartola['posicoes'] -> dicionário (k:v)
-    dictCartola['status']   -> dicionário (k:v)
-    dictCartola['atletas']  -> lista (índice -> dicionário (k:v))
+        dictCartola['clubes']   -> dicionário (k:v)
+        dictCartola['posicoes'] -> dicionário (k:v)
+        dictCartola['status']   -> dicionário (k:v)
+        dictCartola['atletas']  -> lista (índice -> dicionário (k:v))
     '''
     # Informando o nome do clube
     strClube = input('Informe o nome do Clube: ').strip().lower() 
+    
+    # Obtendo o ID do clube informado
+
+    # Listando os atletas do Clube informado
+    '''
     lstAux = dictCartola['clubes']
+    
     #print(lstChaves)
 
     print(lstAux)
@@ -39,4 +45,4 @@ else:
     #print(dictCartola['atletas'])
 
 finally:
-    print('\nFIM DO PROGRAMA...')
+    print('\nFIM DO PROGRAMA...')'''
