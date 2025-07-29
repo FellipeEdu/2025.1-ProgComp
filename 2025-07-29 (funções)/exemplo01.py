@@ -9,5 +9,9 @@ except ValueError:
 except Exception as erro:
     print(f'ERRO: {erro}')
 else:
-    mediaFinal = funcoes.mediaIFRN(intE1, intE2)
-    print(f'MÉDIA = {mediaFinal}')
+    try:
+        mediaFinal = funcoes.mediaIFRN(intE1, intE2)
+    except Exception as erro:
+        print(erro)
+    else:
+        print(f'MÉDIA = {mediaFinal}')
