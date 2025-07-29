@@ -1,13 +1,13 @@
 from logging import exception
-import funcoes
+import sys, funcoes
 
 try:
     intE1 = int(input('Informe E1: '))
     intE2 = int(input('Informe E2: '))
 except ValueError:
-    print('ERRO: Informe inteiro válido')
+    sys.exit('ERRO: Informe inteiro válido')
 except Exception as erro:
-    print(f'ERRO: {erro}')
+    sys.exit(f'ERRO: {erro}')
 else:
     try:
         mediaFinal = funcoes.mediaIFRN(intE1, intE2)
@@ -15,3 +15,4 @@ else:
         print(erro)
     else:
         print(f'MÉDIA = {mediaFinal}')
+        print(f'SITUAÇÃO: {funcoes.situacaoFinal(mediaFinal)}')
