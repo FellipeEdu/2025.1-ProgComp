@@ -57,6 +57,7 @@ lstAnos = [ano[2].year for ano in lstCotacoes]
 '''print(lstCabecalho)
 for cotacoes in lstCotacoes[:5]:
    print(f"{cotacoes[0]:.3f}, {cotacoes[1]:.3f}, {cotacoes[2]}")'''
+print(lstAnos)
 
 for ano in lstAnos:
    arqEscrita = open(f'{strDir}\\cotacao_dolar_{ano}.csv', 'w', encoding='utf-8')
