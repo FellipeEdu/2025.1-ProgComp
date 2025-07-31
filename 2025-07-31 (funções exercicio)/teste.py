@@ -3,6 +3,7 @@ import sys, mathtools
 try:
     numeroA = int(input('Digite o número A: '))
     numeroB = int(input('Digite o número B: '))
+    #numeroGeral 
 
     print(f'MDC de {numeroA}, {numeroB} = {mathtools.mdc(numeroA, numeroB)}')
 except ValueError:
