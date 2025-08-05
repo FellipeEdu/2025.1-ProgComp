@@ -31,4 +31,8 @@ def mdc(numA:int, numB:int) -> int:
         return resto_divisor'''
     
 def fatorial(num:int) -> int:
+    if not isinstance(num, int):
+        raise ValueError ('argumento \'num\' deve ser do tipo INT.')
     
+    if num < 0:
+        raise Exception ('\'num\' deve ser positivo.')
