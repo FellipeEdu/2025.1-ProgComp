@@ -7,7 +7,15 @@ def mdc(numA:int, numB:int) -> int:
     if numA < numB:
         raise Exception ("'numA' deve ser maior que 'numB'.")
 
-    dividendo = numB
+    while numB != 0:
+        resto = numA % numB
+        numA = numB
+        numB = resto
+
+    # retorna numA pois na ultima divisão numA recebe numB, que é o resto de acordo com o algoritmo
+    return numA
+
+    '''dividendo = numB
     resto_divisor = numA % numB
     resto_final = resto_divisor
 
@@ -20,4 +28,7 @@ def mdc(numA:int, numB:int) -> int:
             dividendo = resto_divisor # div = 60
             resto_divisor = resto_final # resto_div = 30 
 
-        return resto_divisor
+        return resto_divisor'''
+    
+def fatorial(num:int) -> int:
+    
