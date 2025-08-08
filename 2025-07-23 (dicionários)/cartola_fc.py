@@ -63,4 +63,4 @@ else:
 
         # TODO: Obter a pontuação do atleta
         fltPontuacaoAtleta = ...
-        print(f'{atleta['nome']} ({atleta['apelido']}) - {strPosicaoAtleta} - {fltPontuacaoAtleta} pontos')   
+        print(f'{atleta['nome']} ({atleta['apelido']})- {strPosicaoAtleta} - {fltPontuacaoAtleta} pontos')   
