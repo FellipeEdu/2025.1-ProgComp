@@ -49,4 +49,8 @@ else:
    if reqHTTP.status_code != 200:
       sys.exit(f'\nERRO: {reqHTTP.status_code} -> {dictRetornoHTTP[reqHTTP.status_code]}\n')
 
-   print(f'\n{reqHTTP.json()}')
+   #print(f'\n{reqHTTP.json()}')
+   dictDados = reqHTTP.json()
+
+   for k, v in dictDados.items():
+      print(f'{k.upper()}: {v}')

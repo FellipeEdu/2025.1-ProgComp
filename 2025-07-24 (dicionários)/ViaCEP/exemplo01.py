@@ -1,7 +1,8 @@
 import requests, sys
 
+cep = input('digite um cep: ')
+
 try:
-    cep = input('digite um cep: ')
     reqHTTP = requests.get(f'https://viacep.com.br/ws/{cep}/json')
 except Exception as erro:
     print(f'ERRO: {erro}')
@@ -9,7 +10,6 @@ else:
     if reqHTTP.status_code != 200:
         sys.exit('Erro na requisição.')
     
-    dictCartola = reqHTTP.json()
+    print(f'\n{reqHTTP}\n')
     #print(f'Status: {reqHTTP.status_code}')
-    print(reqHTTP.json())
-    #print(dictCartola)
+    print(f'{reqHTTP.json()}')
