@@ -91,13 +91,9 @@ def definir_selecao(dicCartola, quantidades_atletas):
             foto_atleta = atleta.get('foto', ' ')
             # correção da URL da foto.
             foto_atleta = foto_atleta.replace('FORMATO', '220x220')
-            '''if '_FORMATO' in foto_atleta:
-                foto_atleta = foto_atleta.replace('_FORMATO', '_220x220')
-            elif '_FORMATO_' in foto_atleta:
-                foto_atleta = foto_atleta.replace('_FORMATO_', '_220x220_')'''
             clube_id = atleta.get('clube_id')
-            clube_nome = clubes.get(clube_id, {}).get('nome_fantasia', ' ')
-            escudo = clubes.get(clube_id, {}).get('escudos', {}).get('60x60','')
+            clube_nome = clubes.get(str(clube_id), {}).get('nome_fantasia', ' ')
+            escudo = clubes.get(str(clube_id), {}).get('escudos', {}).get('60x60','')
             pos_nome = posicoes.get(str(posicao_id), {}).get('nome', '')
             pontuacao = atleta['pontuacao']
             selecao_atletas[atleta_id] = {
