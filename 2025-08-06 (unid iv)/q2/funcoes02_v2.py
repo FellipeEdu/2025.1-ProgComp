@@ -37,22 +37,6 @@ def escolher_escalacao_e_quantidades(escalacao:int):
         '5-3-2': {'goleiro': 1, 'zagueiro': 3, 'lateral': 2, 'meia': 3, 'atacante': 2, 'técnico': 1},
         '5-4-1': {'goleiro': 1, 'zagueiro': 3, 'lateral': 2, 'meia': 4, 'atacante': 1, 'técnico': 1},}
     
-    '''print('Escolha uma das escalações disponíveis:')
-    for i, esc in enumerate(escalacoes, start=1):
-        print(f'{i} - {esc}')
-    # solicitar a escalação desejada.'''
-    '''while True:
-        try:
-            escalacao = int(input('Defina uma escalação ( 1-7 ): '))
-            if 1 <= escalacao <= 7:
-                break
-            else:
-                print(f'ERR0: Escalação inválida.Escolha uma das opções: {escalacoes}')
-        except ValueError:
-            print('ERR0: Por favor, digite um número válido.')
-        except Exception as e:
-            print(f'ERR0: {e}')'''
-    
     escalacao = escalacoes[escalacao - 1]
     quantidades_atletas = quantidades_escalacao[escalacao]
                 
