@@ -1,5 +1,7 @@
-import sys, requests, json
+import sys, requests, json, os
 from datetime import datetime
+
+diretorio = os.path.dirname(__file__)
 
 def dados_cartola(ano:int):
 
@@ -15,10 +17,10 @@ def dados_cartola(ano:int):
     else:
     # carregar dicionário do arquivo de acordo com o ano.
         try:
-            with open(f'cartola_fc_{ano}.json', 'r', encoding='utf-8') as arquivo:
+            with open(f'{diretorio}\\cartola_fc_{ano}.json', 'r', encoding='utf-8') as arquivo:
                 dicCartola = json.load(arquivo)
         except FileNotFoundError:
-            sys.exit(f"ERR0: Arquivo cartola_{ano}.json não encontrado.")
+            sys.exit(f"ERR0: Arquivo cartola_fc_{ano}.json não encontrado.")
         except json.JSONDecodeError:
             sys.exit("ERR0: Erro ao decodificar o JSON do arquivo.")
 
@@ -88,10 +90,11 @@ def definir_selecao(dicCartola, quantidades_atletas):
             apelido_atleta = atleta.get('apelido', ' ')
             foto_atleta = atleta.get('foto', ' ')
             # correção da URL da foto.
-            if '_FORMATO' in foto_atleta:
+            foto_atleta = foto_atleta.replace('FORMATO', '220x220')
+            '''if '_FORMATO' in foto_atleta:
                 foto_atleta = foto_atleta.replace('_FORMATO', '_220x220')
             elif '_FORMATO_' in foto_atleta:
-                foto_atleta = foto_atleta.replace('_FORMATO_', '_220x220_')
+                foto_atleta = foto_atleta.replace('_FORMATO_', '_220x220_')'''
             clube_id = atleta.get('clube_id')
             clube_nome = clubes.get(clube_id, {}).get('nome_fantasia', ' ')
             escudo = clubes.get(clube_id, {}).get('escudos', {}).get('60x60','')
