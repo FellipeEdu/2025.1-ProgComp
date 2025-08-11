@@ -27,12 +27,13 @@ while not outraConsulta == 'N':
 
         nomeMoeda = [cot['nomeFormatado'] for cot in dicMoedas['value'] if cot['simbolo'] == f'{moedaEscolhida}']
         print(f'\nVocê escolheu {str(nomeMoeda[0]).title()}')
+
         reqHTTP = moedaAno(anoEscolhido, moedaEscolhida)
 
         try:
             dicCotacoes = requests.get(reqHTTP).json()
         except requests.RequestException as erro:
-            sys.exit(f"ERR0: Falha na requisição à API: {erro}")   
+            sys.exit(f"\nERR0: Falha na requisição à API: {erro}")   
     except Exception as erro:
         sys.exit(f'\nERRO: {erro}')
     else:
