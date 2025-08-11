@@ -1,5 +1,5 @@
 from datetime import datetime
-from funcoes02 import *
+from funcoes02_v2 import *
 
 ano_atual = datetime.now().year
 while True:
