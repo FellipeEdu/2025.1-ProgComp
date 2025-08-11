@@ -1,0 +1,34 @@
+{
+    "Janeiro": {
+        "mediaCompra": 0.543,
+        "mediaVendas": 0.543
+    },
+    "Fevereiro": {
+        "mediaCompra": 0.534,
+        "mediaVendas": 0.535
+    },
+    "Março": {
+        "mediaCompra": 0.569,
+        "mediaVendas": 0.57
+    },
+    "Abril": {
+        "mediaCompra": 0.59,
+        "mediaVendas": 0.591
+    },
+    "Maio": {
+        "mediaCompra": 0.587,
+        "mediaVendas": 0.587
+    },
+    "Junho": {
+        "mediaCompra": 0.581,
+        "mediaVendas": 0.581
+    },
+    "Julho": {
+        "mediaCompra": 0.576,
+        "mediaVendas": 0.576
+    },
+    "Agosto": {
+        "mediaCompra": 0.569,
+        "mediaVendas": 0.569
+    }
+}
