@@ -25,6 +25,8 @@ while not outraConsulta == 'N':
         while not moedaEscolhida in lstMoedas:
             moedaEscolhida = input('ERRO: Escolha uma moeda válida.\nEscolha uma moeda: ').upper()
 
+        nomeMoeda = [cot['nomeFormatado'] for cot in dicMoedas['value'] if cot['simbolo'] == f'{moedaEscolhida}']
+        print(f'\nVocê escolheu {str(nomeMoeda[0]).title()}')
         reqHTTP = moedaAno(anoEscolhido, moedaEscolhida)
 
         try:
