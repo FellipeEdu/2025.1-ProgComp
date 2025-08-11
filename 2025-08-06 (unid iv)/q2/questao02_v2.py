@@ -16,7 +16,26 @@ while True:
 
 ano, dicCartola = dados_cartola(anoEscolhido)
 
-escalacao, quantidades_atletas = escolher_escalacao_e_quantidades()
+# exibir as escalações disponíveis do cartolaFC.
+escalacoes = ['3-4-3', '3-5-2', '4-3-3', '4-4-2', '4-5-1', '5-3-2', '5-4-1']
+print('Escolha uma das escalações disponíveis:')
+for i, esc in enumerate(escalacoes, start=1):
+    print(f'{i} - {esc}')
+
+# solicitar a escalação desejada.
+while True:
+    try:
+        escalacao = int(input('Defina uma escalação ( 1-7 ): '))
+        if 1 <= escalacao <= 7:
+            break
+        else:
+            print(f'ERR0: Escalação inválida.Escolha uma das opções: {escalacoes}')
+    except ValueError:
+        print('ERR0: Por favor, digite um número válido.')
+    except Exception as e:
+        print(f'ERR0: {e}')
+
+quantidades_atletas = escolher_escalacao_e_quantidades(escalacao)
 
 selecao_atletas, ordem = definir_selecao(dicCartola, quantidades_atletas)
 
