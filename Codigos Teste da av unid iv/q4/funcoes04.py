@@ -78,8 +78,8 @@ def dadosPrevisoes(cidade:str, previsaoDiarias):
     '''
     if cidade and previsaoDiarias:
         nova_consulta = {
-            # COMO CONVERTER UM datetime.now() em
-            'data_hora': datetime.now().strptime('%d/%m/%Y %H:%M:%S'), # datetime.fromtimestamp(previsaoDiarias[0]['data_Previsao']).strftime('%d/%m/%Y %H:%M:%S')
+            # COMO CONVERTER UM datetime.now() em string
+            'data_hora': datetime.now().strftime('%d/%m/%Y %H:%M:%S'), # datetime.fromtimestamp(previsaoDiarias[0]['data_Previsao']).strftime('%d/%m/%Y %H:%M:%S')
             'localizacao': cidade,
             'previsoes_selecionadas': previsaoDiarias # Salva a lista de previsões
         }
