@@ -4,7 +4,7 @@ from funcoes04 import *
 
 locale.setlocale(locale.LC_ALL, '')
 
-print(f'{'-'*20} PREVISÃO DO TEMPO {'-'*20}')
+print(f"{'-' * 20} PREVISÃO DO TEMPO {'-' * 20}")
 outraConsulta = None
 while not outraConsulta == 'N':
     historicoConsultas = lerHistorico()
@@ -24,7 +24,7 @@ while not outraConsulta == 'N':
     #previsaoClimaDias(cidade, opcao)  
     #resultadoAtual = previsaoClimaAtual(cidade)
     resultado = obterPrevisao(cidade, numDias)
-    print(f'\nPrevisão para Hoje e para o(s) Próximo(s) {numDias} Dia(s):\n{'-'*40}')
+    print(f"\nPrevisão para Hoje e para o(s) Próximo(s) {numDias} Dia(s):\n{'-'*40}")
     for previsao in resultado:
         print(f"Data: {previsao['data_Previsao']}") # {datetime.fromtimestamp(previsao['data_Previsao']).strftime('%A, %d/%m')}
         print(f"Temperatura: {previsao['temperatura']:.1f}°C")
