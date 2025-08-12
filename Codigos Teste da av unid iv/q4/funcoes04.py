@@ -3,35 +3,17 @@ from datetime import datetime
 
 diretorio = os.path.dirname(__file__)
 
+'''
+API Key abaixo, obtida criando uma conta no site da API: https://home.openweathermap.org/users/sign_up
+'''
 API_KEY = '76b7682ab999cc218154b6340a6f1451'
 
-'''def previsaoClimaAtual(cidade:str):
-    urlClimaAtual = f"https://api.openweathermap.org/data/2.5/weather?q={cidade},br&appid={API_KEY}&units=metric&lang=pt_br"
-
-    try:
-        print('\nRequisitando dados da API...')
-        try:
-            dadosAtuais = requests.get(urlClimaAtual).json()
-        except requests.RequestException as erro:
-            sys.exit(f"ERR0: Falha na requisição à API: {erro}")
-
-        tempAtual = dadosAtuais['main']['temp']
-        descricaoAtual = dadosAtuais['weather'][0]['description']
-        umidadeAtual = dadosAtuais['main']['humidity']
-
-        print("\n---------- Clima Atual ----------")
-        print(f"Local: {dadosAtuais['name']}, {dadosAtuais['sys']['country']}")
-        print(f"Clima: {descricaoAtual.capitalize()}")
-        print(f"Temperatura: {tempAtual}°C")
-        print(f"Umidade: {umidadeAtual}%")
-        print("-" * 25)
-
-    except requests.exceptions.RequestException as erro:
-        print(f"Erro na requisição de Clima Atual: {erro}")
-    
-    return dadosAtuais'''
-
 def obterPrevisao(cidade:str, numDias = 1): # 1 por padrão (clima do 'dia atual')
+    '''
+    Obtém previsão do tempo a partir dos parâmetros 'cidade' e 'numDias' (número de dias) para previsões dos próximos dias. 
+    É limitado a 5 dias devido função gratuita da API. Retorna uma lista com um único elemento do tipo dicionário contendo a previsão
+    do tempo.
+    '''
     urlPrevisao = f"https://api.openweathermap.org/data/2.5/forecast?q={cidade}&appid={API_KEY}&units=metric&lang=pt_br"
 
     try:
@@ -46,7 +28,7 @@ def obterPrevisao(cidade:str, numDias = 1): # 1 por padrão (clima do 'dia atual
 
         lstPrevisoesSelec = []
         for i in range(numDias + 1): # Pega os próximos dias (ex: 1 + 1 = range 2, vai pegar a previsão até i = 1, que é amanhã)            
-            previsaoDia = dadosPrevisao['list'][i+8] # Pega a primeira previsão do dia
+            previsaoDia = dadosPrevisao['list'][i*8] # Pega a primeira previsão do dia
             dataPrevisao = previsaoDia['dt_txt']
             tempDia = previsaoDia['main']['temp']
             descricaoDia = previsaoDia['weather'][0]['description']
@@ -78,7 +60,6 @@ def dadosPrevisoes(cidade:str, previsaoDiarias):
     '''
     if cidade and previsaoDiarias:
         nova_consulta = {
-            # COMO CONVERTER UM datetime.now() em string
             'data_hora': datetime.now().strftime('%d/%m/%Y %H:%M:%S'), # datetime.fromtimestamp(previsaoDiarias[0]['data_Previsao']).strftime('%d/%m/%Y %H:%M:%S')
             'localizacao': cidade,
             'previsoes_selecionadas': previsaoDiarias # Salva a lista de previsões
@@ -89,7 +70,8 @@ def dadosPrevisoes(cidade:str, previsaoDiarias):
 
 def salvarHistorico(historico, nomeArq="historico.json"):
     '''
-    Salva uma lista de históricos de consulta em um arquivo JSON.
+    Salva uma lista de históricos de consulta em um arquivo JSON. 
+    Recebe uma lista 'histórico' como parâmetro e retorna o JSON.
     '''
     try:
         with open(f'{diretorio}\\{nomeArq}', 'w', encoding='utf-8') as arquivo:

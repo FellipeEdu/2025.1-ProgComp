@@ -8,7 +8,6 @@ print(f"{'-' * 20} PREVISÃO DO TEMPO {'-' * 20}")
 outraConsulta = None
 while not outraConsulta == 'N':
     historicoConsultas = lerHistorico()
-    #resultadoAtual = None
     resultado = None
 
     while True:
@@ -21,8 +20,7 @@ while not outraConsulta == 'N':
             sys.exit('ERRO: digite um valor válido.')
         except Exception as erro:
             sys.exit(f'\nERRO: {erro}')
-    #previsaoClimaDias(cidade, opcao)  
-    #resultadoAtual = previsaoClimaAtual(cidade)
+
     resultado = obterPrevisao(cidade, numDias)
     print(f"\nPrevisão para Hoje e para o(s) Próximo(s) {numDias} Dia(s):\n{'-'*40}")
     for previsao in resultado:
@@ -30,6 +28,7 @@ while not outraConsulta == 'N':
         print(f"Temperatura: {previsao['temperatura']:.1f}°C")
         print(f"Descrição: {previsao['descricao'].capitalize()}")
         print(f"Umidade: {previsao['umidade']}%\n{'-'*40}")
+
     # salvando no histórico
     historicoConsultas.append(dadosPrevisoes(cidade, resultado))
     salvarHistorico(historicoConsultas)

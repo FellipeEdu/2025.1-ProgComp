@@ -58,5 +58,29 @@
                 "umidade": 92
             }
         ]
+    },
+    {
+        "data_hora": "12/08/2025 20:39:50",
+        "localizacao": "natal",
+        "previsoes_selecionadas": [
+            {
+                "data_Previsao": "2025-08-13 00:00:00",
+                "temperatura": 24.12,
+                "descricao": "algumas nuvens",
+                "umidade": 83
+            },
+            {
+                "data_Previsao": "2025-08-14 00:00:00",
+                "temperatura": 23.64,
+                "descricao": "chuva leve",
+                "umidade": 81
+            },
+            {
+                "data_Previsao": "2025-08-15 00:00:00",
+                "temperatura": 24.99,
+                "descricao": "chuva leve",
+                "umidade": 81
+            }
+        ]
     }
 ]
