@@ -26,7 +26,7 @@ while not outraConsulta == 'N':
     resultado = obterPrevisao(cidade, numDias)
     print(f'\nPrevisão para Hoje e para o(s) Próximo(s) {numDias} Dia(s):\n{'-'*40}')
     for previsao in resultado:
-        print(f"Data: {datetime.fromtimestamp(previsao['data_Previsao']).strftime('%A, %d/%m')}")
+        print(f"Data: {previsao['data_Previsao']}") # {datetime.fromtimestamp(previsao['data_Previsao']).strftime('%A, %d/%m')}
         print(f"Temperatura: {previsao['temperatura']:.1f}°C")
         print(f"Descrição: {previsao['descricao'].capitalize()}")
         print(f"Umidade: {previsao['umidade']}%\n{'-'*40}")

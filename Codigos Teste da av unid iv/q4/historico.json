@@ -46,5 +46,29 @@
                 "umidade": 54
             }
         ]
+    },
+    {
+        "data_hora": "2025-08-12 21:00:00",
+        "localizacao": "pau dos ferros",
+        "previsoes_selecionadas": [
+            {
+                "data_Previsao": "2025-08-12 21:00:00",
+                "temperatura": 32.92,
+                "descricao": "céu limpo",
+                "umidade": 25
+            },
+            {
+                "data_Previsao": "2025-08-13 21:00:00",
+                "temperatura": 28.87,
+                "descricao": "céu limpo",
+                "umidade": 33
+            },
+            {
+                "data_Previsao": "2025-08-14 21:00:00",
+                "temperatura": 29.21,
+                "descricao": "nublado",
+                "umidade": 31
+            }
+        ]
     }
 ]

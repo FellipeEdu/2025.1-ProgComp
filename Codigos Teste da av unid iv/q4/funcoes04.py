@@ -39,11 +39,14 @@ def obterPrevisao(cidade:str, numDias = 1): # 1 por padrão (clima do 'dia atual
         try:
             dadosPrevisao = requests.get(urlPrevisao).json()
         except requests.RequestException as erro:
-            sys.exit(f"ERR0: Falha na requisição à API: {erro}")
+            sys.exit(f"ERRO: Falha na requisição à API: {erro}")
+        except json.JSONDecodeError as erro:
+            print(f"ERRO ao ler o arquivo JSON: {erro}. Provavelmente a cidade não existe, ou o nome inserido não é uma cidade.")
+            return []
 
         lstPrevisoesSelec = []
         for i in range(numDias + 1): # Pega os próximos dias (ex: 1 + 1 = range 2, vai pegar a previsão até i = 1, que é amanhã)            
-            previsaoDia = dadosPrevisao['list'][i*8] # Pega a primeira previsão do dia
+            previsaoDia = dadosPrevisao['list'][i+8] # Pega a primeira previsão do dia
             dataPrevisao = previsaoDia['dt_txt']
             tempDia = previsaoDia['main']['temp']
             descricaoDia = previsaoDia['weather'][0]['description']
@@ -75,7 +78,8 @@ def dadosPrevisoes(cidade:str, previsaoDiarias):
     '''
     if cidade and previsaoDiarias:
         nova_consulta = {
-            "data_hora": datetime.fromtimestamp(previsaoDiarias[0]['data_Previsao']).strftime('%d/%m/%Y %H:%M:%S'),
+            # COMO CONVERTER UM datetime.now() em string
+            "data_hora": datetime.now().strptime('%d/%m/%Y %H:%M:%S'), # datetime.fromtimestamp(previsaoDiarias[0]['data_Previsao']).strftime('%d/%m/%Y %H:%M:%S')
             "localizacao": cidade,
             "previsoes_selecionadas": previsaoDiarias # Salva a lista de previsões
         }
