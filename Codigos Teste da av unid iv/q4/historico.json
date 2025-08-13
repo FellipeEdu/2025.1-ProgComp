@@ -1,85 +1,101 @@
 [
     {
-        "data_hora": "12/08/2025 17:21:45",
-        "localizacao": "dubai",
+        "data_hora": "12/08/2025 22:41:03",
+        "localizacao": "jaguaruna",
         "previsoes_selecionadas": [
             {
-                "data_Previsao": "2025-08-13 21:00:00",
-                "temperatura": 31.98,
+                "data_Previsao": "2025-08-13 12:00:00",
+                "temperatura": 16.83,
                 "descricao": "céu limpo",
-                "umidade": 68
-            },
-            {
-                "data_Previsao": "2025-08-14 00:00:00",
-                "temperatura": 31.52,
-                "descricao": "nuvens dispersas",
-                "umidade": 64
+                "umidade": 65,
+                "icone": "https://openweathermap.org/img/wn/01d@2x.png"
             }
         ]
     },
     {
-        "data_hora": "12/08/2025 18:03:21",
-        "localizacao": "macaiba",
+        "data_hora": "12/08/2025 22:41:31",
+        "localizacao": "sitio novo",
         "previsoes_selecionadas": [
             {
-                "data_Previsao": "2025-08-14 00:00:00",
-                "temperatura": 20.97,
-                "descricao": "céu limpo",
-                "umidade": 87
-            },
-            {
-                "data_Previsao": "2025-08-14 03:00:00",
-                "temperatura": 21.06,
+                "data_Previsao": "2025-08-13 12:00:00",
+                "temperatura": 26.2,
                 "descricao": "nublado",
-                "umidade": 90
-            },
-            {
-                "data_Previsao": "2025-08-14 06:00:00",
-                "temperatura": 19.75,
-                "descricao": "chuva leve",
-                "umidade": 98
+                "umidade": 72,
+                "icone": "https://openweathermap.org/img/wn/04d@2x.png"
             }
         ]
     },
     {
-        "data_hora": "12/08/2025 18:04:15",
-        "localizacao": "ceará mirim",
+        "data_hora": "12/08/2025 22:41:45",
+        "localizacao": "brasilia",
         "previsoes_selecionadas": [
             {
-                "data_Previsao": "2025-08-14 00:00:00",
-                "temperatura": 21.45,
-                "descricao": "algumas nuvens",
-                "umidade": 86
+                "data_Previsao": "2025-08-13 12:00:00",
+                "temperatura": 21.21,
+                "descricao": "nublado",
+                "umidade": 47,
+                "icone": "https://openweathermap.org/img/wn/04d@2x.png"
             },
             {
-                "data_Previsao": "2025-08-14 03:00:00",
-                "temperatura": 21.11,
-                "descricao": "nuvens dispersas",
-                "umidade": 92
+                "data_Previsao": "2025-08-14 12:00:00",
+                "temperatura": 22.96,
+                "descricao": "nublado",
+                "umidade": 49,
+                "icone": "https://openweathermap.org/img/wn/04d@2x.png"
             }
         ]
     },
     {
-        "data_hora": "12/08/2025 20:39:50",
+        "data_hora": "12/08/2025 22:42:05",
         "localizacao": "natal",
         "previsoes_selecionadas": [
             {
-                "data_Previsao": "2025-08-13 00:00:00",
-                "temperatura": 24.12,
-                "descricao": "algumas nuvens",
-                "umidade": 83
+                "data_Previsao": "2025-08-13 12:00:00",
+                "temperatura": 27.6,
+                "descricao": "céu limpo",
+                "umidade": 56,
+                "icone": "https://openweathermap.org/img/wn/01d@2x.png"
             },
             {
-                "data_Previsao": "2025-08-14 00:00:00",
-                "temperatura": 23.64,
-                "descricao": "chuva leve",
-                "umidade": 81
+                "data_Previsao": "2025-08-14 12:00:00",
+                "temperatura": 27.82,
+                "descricao": "nuvens dispersas",
+                "umidade": 64,
+                "icone": "https://openweathermap.org/img/wn/03d@2x.png"
             },
             {
-                "data_Previsao": "2025-08-15 00:00:00",
-                "temperatura": 24.99,
+                "data_Previsao": "2025-08-15 12:00:00",
+                "temperatura": 26.19,
                 "descricao": "chuva leve",
-                "umidade": 81
+                "umidade": 79,
+                "icone": "https://openweathermap.org/img/wn/10d@2x.png"
+            },
+            {
+                "data_Previsao": "2025-08-16 12:00:00",
+                "temperatura": 26.85,
+                "descricao": "chuva leve",
+                "umidade": 64,
+                "icone": "https://openweathermap.org/img/wn/10d@2x.png"
+            },
+            {
+                "data_Previsao": "2025-08-17 12:00:00",
+                "temperatura": 27.47,
+                "descricao": "céu limpo",
+                "umidade": 59,
+                "icone": "https://openweathermap.org/img/wn/01d@2x.png"
+            }
+        ]
+    },
+    {
+        "data_hora": "12/08/2025 22:50:46",
+        "localizacao": "mangabeira",
+        "previsoes_selecionadas": [
+            {
+                "data_Previsao": "2025-08-13 12:00:00",
+                "temperatura": 26.08,
+                "descricao": "chuva leve",
+                "umidade": 66,
+                "icone": "https://openweathermap.org/img/wn/10d@2x.png"
             }
         ]
     }
