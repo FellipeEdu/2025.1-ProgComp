@@ -17,20 +17,21 @@ def obterPrevisao(cidade:str, numDias = 1) -> list: # 1 por padrão (clima do 'd
     urlPrevisao = f"https://api.openweathermap.org/data/2.5/forecast?q={cidade}&appid={API_KEY}&units=metric&lang=pt_br"
 
     try:
-        print(f"{'-'*40}\nRequisitando dados da API...")
+        print(f"{'-'*60}\nRequisitando dados da API...")
         dadosPrevisao = requests.get(urlPrevisao).json()
         lstPrevisoesIniciais = []
         lstPrevisoesSelec = []
         dicPrevisoes = {}
 
+        # pega sempre a previsão das 15h pois é um valor mais "real" e/ou "médio" da temperatura do dia
         for previsao in dadosPrevisao['list']:
             testeData = datetime.strptime(previsao['dt_txt'], '%Y-%m-%d %H:%M:%S')
-            if testeData.hour == 12:
+            if testeData.hour == 15:
                 lstPrevisoesIniciais.append(previsao)
 
         for dicPrevisao in lstPrevisoesIniciais[:numDias]: # Percorre cada dia
             try:               
-                previsaoDia = dicPrevisao # [i*8] # Pega a primeira previsão do dia
+                previsaoDia = dicPrevisao 
             except requests.RequestException as erro:
                 print(f"ERRO: Falha na requisição à API: {erro}")
                 return []
@@ -81,7 +82,7 @@ def salvarHistorico(historico, nomeArq="historico.json"):
     try:
         with open(f'{diretorio}\\{nomeArq}', 'w', encoding='utf-8') as arquivo:
             json.dump(historico, arquivo, indent=4, ensure_ascii=False)
-        print(f"\nHistórico salvo com sucesso em '{nomeArq}'.")
+        print(f"\nHistórico salvo com sucesso em '{nomeArq}'.\n{'-'*60}")
     except IOError as erro:
         print(f"\nErro ao salvar o arquivo: {erro}.")
 
@@ -93,11 +94,11 @@ def lerHistorico(nomeArq="historico.json"):
     try:
         with open(f'{diretorio}\\{nomeArq}', 'r', encoding='utf-8') as f:
             historico = json.load(f)
-        print(f"Histórico de consultas carregado de '{nomeArq}'.")
+        print(f"Histórico de consultas carregado de '{nomeArq}'.\n")
         return historico
     except FileNotFoundError:
-        print(f"Arquivo '{nomeArq}' não encontrado. Iniciando um novo histórico.")
+        print(f"\nArquivo '{nomeArq}' não encontrado. Iniciando um novo histórico.")
         return []
     except json.JSONDecodeError as erro:
-        print(f"Erro ao ler o arquivo JSON: {erro}. O arquivo pode estar corrompido.")
+        print(f"\nErro ao ler o arquivo JSON: {erro}. O arquivo pode estar corrompido.")
         return []
