@@ -82,7 +82,7 @@ def salvarHistorico(historico, nomeArq="historico.json"):
     try:
         with open(f'{diretorio}\\{nomeArq}', 'w', encoding='utf-8') as arquivo:
             json.dump(historico, arquivo, indent=4, ensure_ascii=False)
-        print(f"\nHistórico salvo com sucesso em '{nomeArq}'.\n{'-'*60}")
+        print(f"\nHistórico salvo com sucesso em '{nomeArq}'.\n{'*'*60}")
     except IOError as erro:
         print(f"\nErro ao salvar o arquivo: {erro}.")
 

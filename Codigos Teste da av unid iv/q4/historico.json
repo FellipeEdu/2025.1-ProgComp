@@ -150,5 +150,92 @@
                 "icone": "https://openweathermap.org/img/wn/01d@2x.png"
             }
         ]
+    },
+    {
+        "data_hora": "15/08/2025 13:36:19",
+        "localizacao": "Uberlandia",
+        "previsoes_selecionadas": [
+            {
+                "data_Previsao": "2025-08-16 15:00:00",
+                "temperatura": 28.66,
+                "descricao": "céu limpo",
+                "umidade": 24,
+                "icone": "https://openweathermap.org/img/wn/01d@2x.png"
+            }
+        ]
+    },
+    {
+        "data_hora": "15/08/2025 13:42:21",
+        "localizacao": "xique-xique",
+        "previsoes_selecionadas": [
+            {
+                "data_Previsao": "2025-08-16 15:00:00",
+                "temperatura": 29.99,
+                "descricao": "nublado",
+                "umidade": 40,
+                "icone": "https://openweathermap.org/img/wn/04d@2x.png"
+            },
+            {
+                "data_Previsao": "2025-08-17 15:00:00",
+                "temperatura": 29.81,
+                "descricao": "nublado",
+                "umidade": 42,
+                "icone": "https://openweathermap.org/img/wn/04d@2x.png"
+            }
+        ]
+    },
+    {
+        "data_hora": "15/08/2025 13:43:53",
+        "localizacao": "açu",
+        "previsoes_selecionadas": [
+            {
+                "data_Previsao": "2025-08-16 15:00:00",
+                "temperatura": 32.55,
+                "descricao": "nublado",
+                "umidade": 40,
+                "icone": "https://openweathermap.org/img/wn/04d@2x.png"
+            }
+        ]
+    },
+    {
+        "data_hora": "15/08/2025 13:46:23",
+        "localizacao": "martins",
+        "previsoes_selecionadas": [
+            {
+                "data_Previsao": "2025-08-16 15:00:00",
+                "temperatura": 26.7,
+                "descricao": "chuva leve",
+                "umidade": 55,
+                "icone": "https://openweathermap.org/img/wn/10d@2x.png"
+            },
+            {
+                "data_Previsao": "2025-08-17 15:00:00",
+                "temperatura": 31.47,
+                "descricao": "nublado",
+                "umidade": 23,
+                "icone": "https://openweathermap.org/img/wn/04d@2x.png"
+            },
+            {
+                "data_Previsao": "2025-08-18 15:00:00",
+                "temperatura": 31.18,
+                "descricao": "algumas nuvens",
+                "umidade": 28,
+                "icone": "https://openweathermap.org/img/wn/02d@2x.png"
+            },
+            {
+                "data_Previsao": "2025-08-19 15:00:00",
+                "temperatura": 31.51,
+                "descricao": "algumas nuvens",
+                "umidade": 29,
+                "icone": "https://openweathermap.org/img/wn/02d@2x.png"
+            },
+            {
+                "data_Previsao": "2025-08-20 15:00:00",
+                "temperatura": 30.73,
+                "descricao": "nublado",
+                "umidade": 30,
+                "icone": "https://openweathermap.org/img/wn/04d@2x.png"
+            }
+        ]
     }
 ]

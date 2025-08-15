@@ -34,7 +34,7 @@ while True:
     if opcao == 1:
         while True:
             try:
-                cidade = input('\nDigite o nome de uma cidade (ex.: Macaiba): ')
+                cidade = input(f'\n{'*'*60}\nDigite o nome de uma cidade (ex.: Macaiba): ')
                 numDias = int(input('\nConsultar Previsão de Hoje (1) a até (5) Dias\nEscolha de 1 a 5 dias: '))
 
                 if 1 <= numDias <= 5: break
@@ -56,8 +56,17 @@ while True:
         historicoConsultas.append(dadosPrevisoes(cidade, resultadoPrevisao))  
         salvarHistorico(historicoConsultas)
     elif opcao == 2:
-        print(f'\nExibindo Histórico...\n{'-'*150}')
+        print(f'\nExibindo Histórico...\n{'*'*150}')
         for historico in historicoConsultas:
-            print(f'{historico}\n{'-'*150}')
+            # print(f'{historico}\n{'-'*150}')
+            print(f'Horário da Consulta: {historico['data_hora']}')
+            print(f'Localidade: {historico['localizacao'].capitalize()}')
+            print(f'Previsões Selecionadas:\n{'*'*100}')
+            for previsao in historico['previsoes_selecionadas']:
+                print(f"Data: {datetime.strptime(previsao['data_Previsao'], '%Y-%m-%d %H:%M:%S').strftime('%A, %d/%m')}")
+                print(f"Temperatura: {previsao['temperatura']:.1f}°C")
+                print(f"Descrição: {previsao['descricao'].capitalize()} | {previsao['icone']}")
+                print(f"Umidade: {previsao['umidade']}%\n{'-'*60}")
+        print(f'Fim da Exibição do Histórico.\n{'*'*150}')        
     else:
         break
