@@ -1,0 +1,43 @@
+Nome;Categoria;Melhor Preço;Empresa
+Computador;Permanente;2500.00;Empresa A
+Impressora;Permanente;800.00;Empresa A
+Monitor;Permanente;1312.50;Empresa C
+Teclado;Consumo;140.00;Empresa C
+Mouse;Permanente;105.00;Empresa C
+Notebook;Permanente;4112.50;Empresa C
+Webcam;Consumo;218.75;Empresa C
+Fone de ouvido;Consumo;170.00;Empresa B
+Caixa de som;Consumo;175.00;Empresa C
+HD Externo;Permanente;306.25;Empresa C
+SSD;Consumo;253.75;Empresa C
+Teclado mecânico;Permanente;297.50;Empresa C
+Placa de vídeo;Permanente;1750.00;Empresa B
+Roteador;Consumo;183.75;Empresa C
+Microfone;Permanente;227.50;Empresa C
+Fonte de alimentação;Permanente;300.00;Empresa B
+Mochila para notebook;Consumo;105.00;Empresa C
+Cabo HDMI;Permanente;26.25;Empresa C
+Adaptador USB;Consumo;45.00;Empresa B
+Router Wireless;Permanente;236.25;Empresa C
+Scanner;Permanente;612.50;Empresa C
+Projetor;Consumo;1400.00;Empresa C
+Cooler;Permanente;100.00;Empresa A
+Pen Drive;Consumo;35.00;Empresa C
+Placa mãe;Permanente;700.00;Empresa C
+Processador;Permanente;1268.75;Empresa C
+Memória RAM;Permanente;350.00;Empresa B
+Fonte de notebook;Consumo;148.75;Empresa C
+Mouse gamer;Permanente;201.25;Empresa C
+Cadeira gamer;Consumo;630.00;Empresa C
+Sistema de áudio;Consumo;420.00;Empresa C
+Impressora 3D;Permanente;2100.00;Empresa C
+Placa de captura;Permanente;516.25;Empresa C
+Cartucho de tinta;Consumo;48.12;Empresa C
+Carregador portátil;Consumo;96.25;Empresa C
+Suporte para notebook;Consumo;90.00;Empresa B
+Chave de segurança;Consumo;40.00;Empresa B
+Cabo de rede;Permanente;17.50;Empresa C
+Extensão elétrica;Consumo;26.25;Empresa C
+Bateria para notebook;Permanente;210.00;Empresa C
+Fonte de alimentação gamer;Permanente;420.00;Empresa C
+Headset;Permanente;306.25;Empresa C
