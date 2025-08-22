@@ -237,5 +237,25 @@
                 "icone": "https://openweathermap.org/img/wn/04d@2x.png"
             }
         ]
+    },
+    {
+        "data_hora": "22/08/2025 16:05:20",
+        "localizacao": "natal",
+        "previsoes_selecionadas": [
+            {
+                "data_Previsao": "2025-08-23 15:00:00",
+                "temperatura": 28.29,
+                "descricao": "chuva leve",
+                "umidade": 60,
+                "icone": "https://openweathermap.org/img/wn/10d@2x.png"
+            },
+            {
+                "data_Previsao": "2025-08-24 15:00:00",
+                "temperatura": 27.78,
+                "descricao": "chuva leve",
+                "umidade": 67,
+                "icone": "https://openweathermap.org/img/wn/10d@2x.png"
+            }
+        ]
     }
 ]
