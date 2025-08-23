@@ -22,7 +22,7 @@ else:
 
     # 2. Percorre os números a partir do 2
     for numero in range(2, maxPrimos + 1):
-        # 3. Se o número ainda é considerado primo...
+        # 3. Se o número ainda é considerado primo... (ou seja, está marcado como True em lstNaoPrimos)
         if lstNaoPrimos[numero]:
             # ... marca todos os seus múltiplos como não-primos.
             # Começamos de 2*numero para não incluir o próprio número.
@@ -31,8 +31,7 @@ else:
 
             while multiplicacao <= maxPrimos:
                 # Usa o array booleano para marcar.
-                # A verificação 'if (multiplicacao not in lstNaoPrimos)' se torna
-                # desnecessária, pois simplesmente "riscamos" o número.
+                # A verificação 'if (multiplicacao not in lstNaoPrimos)' se torna desnecessária, pois simplesmente "riscamos" o número.
                 lstNaoPrimos[multiplicacao] = False
                 multiplicador += 1
                 multiplicacao = numero * multiplicador
